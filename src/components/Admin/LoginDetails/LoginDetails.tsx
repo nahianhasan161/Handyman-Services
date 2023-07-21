@@ -15,7 +15,7 @@ const LoginDetails:React.FC<LoginDetailsProps> = () => {
     <div className=' h-screen flex flex-col m-10 '>
          
             <div>
-         <h1 className='text-2xl md:text-3xl font-bold py-3'>Login Details</h1>
+         <h1 className='text-xl md:text-2xl font-bold py-3'>Login Details</h1>
         </div>
         <div>
            <Table titles={titles} informations={informations}/> 

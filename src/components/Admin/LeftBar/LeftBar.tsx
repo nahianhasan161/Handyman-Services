@@ -1,14 +1,14 @@
  "use client"
 import React,{useState} from 'react'
-import Image from 'next/image';
+
 import Link from 'next/link';
-import Logo from "/public/logo-full.png";
-import avatarImg from "@/../public/avatar.png";
+
 import Profile from '../Avatar/Profile';
 import {CgProfile} from "react-icons/cg";
 import Item from './Item';
 import {RxCross1} from "react-icons/rx"
 import {AiOutlineMenu} from "react-icons/ai"
+import Image from 'next/image';
 
 type LeftBarProps = {
   
@@ -19,9 +19,9 @@ const LeftBar:React.FC<LeftBarProps> = () => {
   const [isAction ,setIsActive] = useState("homepage");
   const [show ,setShow] = useState(true);
   return (
-    <div className={`w-full ${show? "lg:basis-1/3 " : " bg-[#F2F8FF]"} shadow-2xl `}>
+    <div className={`w-full  ${show? "lg:basis-1/3 " : " bg-[#F2F8FF]"} box-shadow-top`}>
       {!show && 
-      <button className='hover:scale-105 transition-all' onClick={()=>{
+      <button className='' onClick={()=>{
         setShow(!show)
        }}>
         <span className=''>
@@ -31,44 +31,44 @@ const LeftBar:React.FC<LeftBarProps> = () => {
       </button>
       }
         {show && (<div className='py-5 pl-5 '>
-           {/*  <div className='circle-full w-5'>
-            <Image src="https://i.pravatar.cc/300" width={100} height={100} alt='profile_img' />
-            </div> */}
+          
             <div className='flex justify-between align-items-center'>
 
              <Profile/>
-             <div className='w-10 hover:scale-110 transition-all' >
               {/* close btn */}
+            {/*  <div className='w-10 hover:scale-110 transition-all' >
              <span className="p-3 cursor-pointer  " onClick={()=>{
               setShow(!show)
              }}><RxCross1/></span>
 
-             </div>
+             </div> */}
+             {/* TODO:  MARGIN */}
             </div>
-            <div>
+            <div className=''>
             {/* client section */}
-            <h1 className=" my-5 text-sm md:text-2xl">Client Section</h1>
+            <h1 className=" my-5 ml-7 text-sm md:text-xl font-bold">Client Section</h1>
             <div className='my-3 sm:my-5 md:my-7 pl-2 sm:pl-5 md:pl-8'>
                 <ul>
                     
                   
                   
-                <Link href={"/admin"} 
+                <Link className="cursor-pointer" href={"/admin"} 
                 onClick={()=>{
                   setIsActive("homepage")
                 }}
-                >  <Item title="Client Profile" active={"homepage" == isAction} icon={<CgProfile/>}/></Link>
+                >  <Item title="Client Profile" active={"homepage" == isAction} icon={"account-avatar-head-person-profile-icon-2.png"}/></Link>
                   
-                <Link href={"/admin/login/details"} 
+                <Link className="cursor-pointer" href={"/admin/login/details"} 
                 onClick={()=>{
                   setIsActive("loginpage")
                 }}
-                >   <Item title="Login Details" active={"loginpage" == isAction}  icon={<CgProfile/>}/> </Link>
-                <Link href={"/listing"}>  <Item title="Active Listing"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/email"}>  <Item title="Change Email"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/offer"}> <Item title="Accepted Offers"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/review"}>  <Item title="Review Section"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/prev-offer"}>  <Item title="Un Accepted Offers"  icon={<CgProfile/>}/>  </Link>
+                
+                >   <Item title="Login Details" active={"loginpage" == isAction}  icon={"account-door-enter-login-icon-1.png"}/> </Link>
+                <Link className="cursor-pointer" href={"/listing"}>  <Item title="Active Listing"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/email"}>  <Item title="Change Email"  icon={"email-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/offer"}> <Item title="Accepted Offers"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/review"}>  <Item title="Review Section"  icon={"bookmark-favorite-rank-rating-star-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Un Accepted Offers"  icon={"cancel-close-cross-delete-reject-icon-1.png"}/>  </Link>
                   
                 </ul>
             </div>
@@ -76,27 +76,35 @@ const LeftBar:React.FC<LeftBarProps> = () => {
              {/* options */}
             {/* Handyman section */}
             <div className='my-2 '>
-            <h1 className=" my-3 text-sm md:text-2xl">Handyman Section</h1>
+            <h1 className=" my-3 ml-7 text-sm md:text-xl font-bold">Handyman Section</h1>
             <div className='my-3 sm:my-5 md:my-7 pl-2 sm:pl-5 md:pl-8'>
                 <ul>
                     
                   
                   
-                <Link href={"/profile"}>  <Item title="Handyman Profile"  icon={<CgProfile/>}/></Link>
+                <Link className="cursor-pointer" href={"/profile"}>  <Item title="Handyman Profile"  icon={"account-avatar-head-person-profile-icon-2.png"}/></Link>
                   
-                <Link href={"/login"}>   <Item title="Login Details"  icon={<CgProfile/>}/> </Link>
-                <Link href={"/listing"}>  <Item title="Active Listing"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/email"}>  <Item title="Send Offers"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/offer"}> <Item title="Accepted Offers"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/review"}>  <Item title="Review Section"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/prev-offer"}>  <Item title="Un Accepted Offers"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/prev-offer"}>  <Item title="Ratings"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/prev-offer"}>  <Item title="Activation Setting"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/prev-offer"}>  <Item title="Uploaded Documents"  icon={<CgProfile/>}/>  </Link>
-                <Link href={"/prev-offer"}>  <Item title="All New Profile"  icon={<CgProfile/>}/>  </Link>
+                <Link className="cursor-pointer" href={"/login"}>   <Item title="Login Details"  icon={"account-door-enter-login-icon-1.png"}/> </Link>
+                <Link className="cursor-pointer" href={"/listing"}>  <Item title="Active Listing"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/email"}>  <Item title="Send Offers"  icon={"sent-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/offer"}> <Item title="Accepted Offers"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
+                
+                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Un Accepted Offers"  icon={"cancel-close-cross-delete-reject-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Ratings"  icon={"bookmark-favorite-rank-rating-star-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Activation Setting"  icon={"unnamed.svg"}/>  </Link>
+                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Uploaded Documents"  icon={"cloud-upload-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="All New Profile"  icon={"account-avatar-head-person-profile-icon-2.png"}/>  </Link>
                   
                 </ul>
-                <Link href={"/logout"}><h1 className=' pl-10 text-xl mt-auto font-bold hover:scale-105 transition-all hover:text-slate-950'>Logout</h1></Link>
+                <Link className="cursor-pointer flex items-center gap-5 pl-7 mt-10" href={"/logout"}>
+                  <span>
+
+                  <Image src="/icons/close-exit-logout-power-icon-1.png" alt="logout_icon" height={15} width={15}
+                  className='rounded-full outline outline-[10px] outline-[#E0DBDB]'
+                  />
+                  </span>
+                  <h1 className='  text-xl  font-bold  text-[#0E172C]'>
+                  Logout</h1></Link>
             </div>
                 
             </div>

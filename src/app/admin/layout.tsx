@@ -9,8 +9,8 @@ import LeftBar from "@/components/Admin/LeftBar/LeftBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "NeadCode",
-  description: "coding problem and solving site with tutorials",
+  title: "Dashbord",
+  description: "Admin Dashbord",
 };
 
 export default function RootLayout({
