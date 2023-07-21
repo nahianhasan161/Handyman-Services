@@ -64,11 +64,11 @@ const LeftBar:React.FC<LeftBarProps> = () => {
                 }}
                 
                 >   <Item title="Login Details" active={"loginpage" == isAction}  icon={"account-door-enter-login-icon-1.png"}/> </Link>
-                <Link className="cursor-pointer" href={"/listing"}>  <Item title="Active Listing"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/email"}>  <Item title="Change Email"  icon={"email-icon-1.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/offer"}> <Item title="Accepted Offers"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/review"}>  <Item title="Review Section"  icon={"bookmark-favorite-rank-rating-star-icon-1.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Un Accepted Offers"  icon={"cancel-close-cross-delete-reject-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/listing/active"}>  <Item title="Active Listing"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/email/changed"}>  <Item title="Change Email"  icon={"email-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/offer/accepted"}> <Item title="Accepted Offers"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/review"}>  <Item title="Review Section"  icon={"bookmark-favorite-rank-rating-star-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/prev-offer"}>  <Item title="Un Accepted Offers"  icon={"cancel-close-cross-delete-reject-icon-1.png"}/>  </Link>
                   
                 </ul>
             </div>
@@ -85,7 +85,7 @@ const LeftBar:React.FC<LeftBarProps> = () => {
                 <Link className="cursor-pointer" href={"/profile"}>  <Item title="Handyman Profile"  icon={"account-avatar-head-person-profile-icon-2.png"}/></Link>
                   
                 <Link className="cursor-pointer" href={"/login"}>   <Item title="Login Details"  icon={"account-door-enter-login-icon-1.png"}/> </Link>
-                <Link className="cursor-pointer" href={"/listing"}>  <Item title="Active Listing"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/listing/active"}>  <Item title="Active Listing"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
                 <Link className="cursor-pointer" href={"/email"}>  <Item title="Send Offers"  icon={"sent-icon-1.png"}/>  </Link>
                 <Link className="cursor-pointer" href={"/offer"}> <Item title="Accepted Offers"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
                 

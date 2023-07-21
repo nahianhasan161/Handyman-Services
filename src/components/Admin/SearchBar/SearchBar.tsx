@@ -16,11 +16,11 @@ const SearchBar:React.FC<SearchBarProps> = () => {
                     <Image src={"/icons/search.png"} alt='search_icon' height={16} width={16}></Image>
                 </label>
                 <input id="search" name='search' type="text"
-                 className='p-3 w-full outline-0 text-xs  border-slate-400 text-#0e172c80'
+                 className='p-3 w-full outline-0 text-xs  border-slate-400 text-offwhite-100'
                  placeholder='Search By Email,Company Name or ListingId...'/>
             </div>
             <div>
-                <button className=' px-2 sm:w-max w-full  border-[#00000033] text-[#0E172C] text-xs '>Find a Profile</button>
+                <button className=' px-2 sm:w-max w-full  border-[#00000033] text-offwhite-400 text-xs '>Find a Profile</button>
             </div>
         </form>
         </div>

@@ -35,4 +35,8 @@ body {
 .box-shadow-top{
   box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.25);
 }
+.input-border{
+  border: 1px solid rgba(14, 23, 44, 0.20);
+  
+}
 

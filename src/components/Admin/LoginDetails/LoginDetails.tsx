@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import {CgProfile} from "react-icons/cg";
+
 import Table from '../Table/Table';
 type LoginDetailsProps = {
     
