@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Button/Button';
+import Button from '../Button/ActionButton';
 
 
 type ReviewCartProps = {
@@ -27,7 +27,7 @@ const ReviewCart:React.FC<ReviewCartProps> = ({Details,Status,Logs}) => {
                <p className='flex gap-9 items-center text-xs '>{Logs.map((Log,key)=> <span key={key} className={`${key == 0 ? 'font-bold': ''}`}>{Log}</span> )}</p>
             </div>
             <div className='text-center  pt-2'>
-                <Button title='Edit Review' className='bg-orange_500 font-bold rounded-xl py-3 px-8 text-white '/>
+                <Button title='Edit Review' />
             </div>
         </div>
         

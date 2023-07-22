@@ -1,3 +1,4 @@
+import StatusSection from '@/components/Admin/Section/StatusSection';
 import React from 'react';
 
 type PageProps = {
@@ -10,13 +11,13 @@ const Page:React.FC<PageProps> = () => {
   return  (
     <div className=' h-screen flex flex-col m-10 '>
 
-            {/* Heading Part */}
-            <div>
-         <h1 className='text-xl md:text-2xl font-bold py-3'>Account Verify Section</h1>
-        </div>
+          
         {/* Content Part */}
-            <div className='flex items-center gap-3 w-full'>
-             Account Verify Section TODO
+            <div className='mt-5 w-full flex justify-between items-center'>
+             <StatusSection title='Verify Account' description='Verify the account' btnTitle='Verify Account'/>
+             <StatusSection title='Active Account' description='Active the account' btnTitle='Active Account'/>
+             <StatusSection title='Deactive Account' description='Deactive the account' btnTitle='Deactive Account'/>
+
             </div>
         </div>
         
