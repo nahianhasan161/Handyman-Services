@@ -8,7 +8,7 @@ type TableDataProps = {
 const TableData:React.FC<TableDataProps> = ({title}) => {
     
     return (<>
-    <td className='p-5 max-w-[12rem]'>{title}</td>
+    <td className='p-5 max-w-[12rem] min-w-[10rem]'>{title}</td>
     </>)
 }
 export default TableData;

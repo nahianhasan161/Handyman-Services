@@ -19,7 +19,8 @@ const LeftBar:React.FC<LeftBarProps> = () => {
   const [isAction ,setIsActive] = useState("homepage");
   const [show ,setShow] = useState(true);
   return (
-    <div className={`w-full  ${show? "lg:basis-1/3 " : " bg-[#F2F8FF]"} box-shadow-top`}>
+    <div className={` basis-1/4 bg-[#F2F8FF box-shadow-top`}>
+    {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
       {!show && 
       <button className='' onClick={()=>{
         setShow(!show)
@@ -68,7 +69,7 @@ const LeftBar:React.FC<LeftBarProps> = () => {
                 <Link className="cursor-pointer" href={"/admin/email/changed"}>  <Item title="Change Email"  icon={"email-icon-1.png"}/>  </Link>
                 <Link className="cursor-pointer" href={"/admin/offer/accepted"}> <Item title="Accepted Offers"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
                 <Link className="cursor-pointer" href={"/admin/review"}>  <Item title="Review Section"  icon={"bookmark-favorite-rank-rating-star-icon-1.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/admin/prev-offer"}>  <Item title="Un Accepted Offers"  icon={"cancel-close-cross-delete-reject-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/offer/unaccepted"}>  <Item title="Un Accepted Offers"  icon={"cancel-close-cross-delete-reject-icon-1.png"}/>  </Link>
                   
                 </ul>
             </div>
@@ -82,18 +83,18 @@ const LeftBar:React.FC<LeftBarProps> = () => {
                     
                   
                   
-                <Link className="cursor-pointer" href={"/profile"}>  <Item title="Handyman Profile"  icon={"account-avatar-head-person-profile-icon-2.png"}/></Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/profile"}>  <Item title="Handyman Profile"  icon={"account-avatar-head-person-profile-icon-2.png"}/></Link>
                   
-                <Link className="cursor-pointer" href={"/login"}>   <Item title="Login Details"  icon={"account-door-enter-login-icon-1.png"}/> </Link>
-                <Link className="cursor-pointer" href={"/admin/listing/active"}>  <Item title="Active Listing"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/email"}>  <Item title="Send Offers"  icon={"sent-icon-1.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/offer"}> <Item title="Accepted Offers"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/login/details"}>   <Item title="Login Details"  icon={"account-door-enter-login-icon-1.png"}/> </Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/listing/active"}>  <Item title="Active Listing"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/offer/sent"}>  <Item title="Sent Offers"  icon={"sent-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/offer/accepted"}> <Item title="Accepted Offers"  icon={"accept-approved-check-checked-confirm-icon-2.png"}/>  </Link>
                 
-                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Un Accepted Offers"  icon={"cancel-close-cross-delete-reject-icon-1.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Ratings"  icon={"bookmark-favorite-rank-rating-star-icon-1.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Activation Setting"  icon={"unnamed.svg"}/>  </Link>
-                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="Uploaded Documents"  icon={"cloud-upload-icon-1.png"}/>  </Link>
-                <Link className="cursor-pointer" href={"/prev-offer"}>  <Item title="All New Profile"  icon={"account-avatar-head-person-profile-icon-2.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/offer/unaccepted"}>  <Item title="Un Accepted Offers"  icon={"cancel-close-cross-delete-reject-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/rating"}>  <Item title="Ratings"  icon={"bookmark-favorite-rank-rating-star-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/account/verify"}>  <Item title="Activation Setting"  icon={"unnamed.svg"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/uploaded/documents"}>  <Item title="Uploaded Documents"  icon={"cloud-upload-icon-1.png"}/>  </Link>
+                <Link className="cursor-pointer" href={"/admin/handyman/profile/new"}>  <Item title="All New Profile"  icon={"account-avatar-head-person-profile-icon-2.png"}/>  </Link>
                   
                 </ul>
                 <Link className="cursor-pointer flex items-center gap-5 pl-7 mt-10" href={"/logout"}>

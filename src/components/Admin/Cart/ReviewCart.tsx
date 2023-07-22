@@ -1,34 +1,36 @@
 import React from 'react';
+import Button from '../Button/Button';
 
 
 type ReviewCartProps = {
-    Titles:Array<string>,
-    Values:Array<string>,
+    Details:Array<Array<string>>,
+   
     Status:string,
-    Infos:Array<string>
+    Logs:Array<string>
 };
 
-const ReviewCart:React.FC<ReviewCartProps> = ({Titles,Values,Status,Infos}) => {
+const ReviewCart:React.FC<ReviewCartProps> = ({Details,Status,Logs}) => {
     
     
-    return (<div className='bg-white p-3'>
+    return (
 
-        <div className='text-offwhite-400 p-5 relative'>
+        <div className='text-offwhite-400 p-5 relative bg-white max-w-[28rem]'>
                 <span className='text-xs absolute top-5 right-5 text-offwhite-50'>{Status}</span>
             <div>
-               {Titles && Titles.map((title,index)=>
+               {Details && Details.map((Detail,index)=>
                 <>
                 
-                <h1 className='font-bold text-md ' key={index}>title</h1>
-                <p className='text-xs'>{Values[index]}</p>
+                <h1 className='font-bold text-sm pb-1' key={index}>{Detail[0]}</h1>
+                <p className='text-xs pb-2 max-w-[14rem]'>{Detail[1]}</p>
                 </>
                )}
-               <p>{Infos.map((info,key)=> <p key={key}>{info}</p> )}</p>
+               <p className='flex gap-9 items-center text-xs '>{Logs.map((Log,key)=> <span key={key} className={`${key == 0 ? 'font-bold': ''}`}>{Log}</span> )}</p>
             </div>
-            <div >
+            <div className='text-center  pt-2'>
+                <Button title='Edit Review' className='bg-orange_500 font-bold rounded-xl py-3 px-8 text-white '/>
             </div>
         </div>
         
-    </div>);
+    );
 }
 export default ReviewCart;

@@ -28,13 +28,13 @@ export default function RootLayout({
         <div>
             <NavBar />
         </div>
-        <div className='flex flex-wrap'>
+        <div className='flex'>
             
                 
     
                 <LeftBar />
            
-            <div className="w-full basis-2/3 flex-grow bg-[#F2F8FF] " >
+            <div className="w-full basis-3/4 flex-grow bg-[#F2F8FF] " >
            {children}
 
            

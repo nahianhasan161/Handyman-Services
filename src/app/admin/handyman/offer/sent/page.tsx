@@ -19,16 +19,16 @@ const Page:React.FC<PageProps> = () => {
 
             {/* Heading Part */}
             <div>
-         <h1 className='text-xl md:text-2xl font-bold py-3'>Accepted Offers</h1>
+         <h1 className='text-xl md:text-2xl font-bold py-3'>Sent Offers</h1>
         </div>
         {/* Content Part */}
             <div className='flex items-center gap-3 w-full'>
               <div className='flex-1'>
-                <ReviewCart Details={Details}  Logs={Logs} Status='Accepted'/>
+                <ReviewCart Details={Details}  Logs={Logs} Status='Sent'/>
               </div>
               <div className='flex-1'>
 
-                <ReviewCart Details={Details}  Logs={Logs} Status='Accepted'/>
+                <ReviewCart Details={Details}  Logs={Logs} Status='Sent'/>
               </div>
             </div>
         </div>
