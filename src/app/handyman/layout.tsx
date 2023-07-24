@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={inter.className}>
       <main className=" min-h-screen min-w-fit">
         <div>
-            <NavBar isMessage={true} isDeleteBtn={true}/>
+            <NavBar isMessage={true} />
         </div>
         <div className='flex'>
             

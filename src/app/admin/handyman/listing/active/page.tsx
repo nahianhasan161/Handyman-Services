@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 import {CgProfile} from "react-icons/cg";
 import Table from '@/components/Admin/Table/Table';
+import Typography from '@/components/Utilities/Typography';
+import HeadingType from '@/helper/enums/HeadingType';
 type PageProps = {
     
     
@@ -15,7 +17,12 @@ const Page:React.FC<PageProps> = () => {
     <div className=' h-screen flex flex-col m-10 '>
          
             <div>
-         <h1 className='text-xl md:text-2xl font-bold py-3'>Active Listing</h1>
+         
+         <Typography
+         Type={HeadingType.h1}
+         Description='Active Listing'
+         className='font-bold'
+         />
         </div>
         <div>
            <Table titles={titles} informations={informations}/> 

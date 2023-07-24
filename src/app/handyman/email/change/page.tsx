@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import InputForm from '@/components/Admin/Input/InputForm';
 import ActionButton from '@/components/Admin/Button/ActionButton';
+import InputRow from '@/components/Admin/Section/InputRow';
 type PageProps = {
     
     
@@ -18,17 +19,16 @@ const Page:React.FC<PageProps> = () => {
          <h1 className='text-xl md:text-2xl font-bold py-3'>Changed Email</h1>
         </div>
         <div className='bg-white sm:p-5 p-3'>
-            <div className='grid grid-cols-12 gap-2 items-center pb-5 pr-[4rem] pl-[2rem] min-w-[40rem]'>
-                <div className='col-span-6'>
-           <InputForm title="Old Email" name="old_email" type="email" placeholder='abc@gmail.com'  />
-
-                </div>
-                <div className='col-span-6'>
-           <InputForm title="New Email" name="new_email" type="email" placeholder='xyz@gmail.com' />
-
-                </div>
-
-            </div>
+        <InputRow
+            title1='New Email'
+            name1='new_email'
+            type1='email'
+            placeholder1='abc@gmail.com'
+            title2='Confirm Email'
+            name2='confirm_email'
+            type2='email'
+            placeholder2='xyz@gmail.com'
+            />
             <ActionButton title='Save Changes' className='float-right'/>
         </div>
         </div>

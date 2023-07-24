@@ -1,6 +1,9 @@
 import React, { ReactNode } from 'react';
 import InputForm from '@/components/Admin/Input/InputForm';
 import ActionButton from '@/components/Admin/Button/ActionButton';
+import InputRow from '@/components/Admin/Section/InputRow';
+import Typography from '@/components/Utilities/Typography';
+import HeadingType from '@/helper/enums/HeadingType';
 type PageProps = {
     
     
@@ -12,20 +15,24 @@ const Page:React.FC<PageProps> = () => {
     <div className=' h-screen flex flex-col m-10 '>
          
             <div>
-         <h1 className='text-xl md:text-2xl font-bold py-3'>Changed Email</h1>
+         
+         <Typography
+         Type={HeadingType.h1}
+         Description='Change Password'
+         className='font-bold'
+         />
         </div>
         <div className='bg-white sm:p-5 p-3'>
-            <div className='grid grid-cols-12 gap-2 items-center pb-5 pr-[4rem] pl-[2rem] min-w-[40rem]'>
-                <div className='col-span-6'>
-           <InputForm title="Old Password" name="old_Password" type="password" placeholder='********'  />
-
-                </div>
-                <div className='col-span-6'>
-           <InputForm title="New Password" name="new_Password" type="password" placeholder='********' />
-
-                </div>
-
-            </div>
+        <InputRow 
+            name1='old_password'
+            title1='Old Password'
+            type1='password'
+            placeholder1='********'
+            name2='new_password'
+            title2='New Password'
+            type2='password'
+            placeholder2='********'
+            />
             <ActionButton title='Save Changes' className='float-right'/>
         </div>
         </div>

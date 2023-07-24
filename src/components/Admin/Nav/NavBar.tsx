@@ -14,6 +14,7 @@ import ActionButton from '../Button/ActionButton';
 type NavBarProps = {
   isMessage?:boolean,
   isDeleteBtn?:boolean,
+  
 };
 
 const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
@@ -61,7 +62,7 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
                             >
                            
                           
-                          <Image src="/icons/messageIcon.svg" alt='bell_icon' width={30} height={30} className='min-w-[5px]'></Image>
+                          <Image src="/icons/messageIcon.svg" alt='bell_icon' width={30} height={30} className='min-w-[15px]'></Image>
                             
                         </button>
                       </div>)}
@@ -80,7 +81,7 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
                             >
                            
                           
-                          <Image src="/icons/ring_icon.png" alt='bell_icon' width={30} height={30} className='min-w-[5px]'></Image>
+                          <Image src="/icons/ring_icon.png" alt='bell_icon' width={30} height={30} className='min-w-[15px]'></Image>
                             
                         </button>
                       </div>

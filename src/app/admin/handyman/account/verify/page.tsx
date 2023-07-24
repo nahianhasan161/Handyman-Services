@@ -13,7 +13,7 @@ const Page:React.FC<PageProps> = () => {
 
           
         {/* Content Part */}
-            <div className='mt-5 w-full flex justify-between items-center'>
+            <div className='mt-5 w-full flex flex-col sm:flex-row justify-between items-center'>
              <StatusSection title='Verify Account' description='Verify the account' btnTitle='Verify Account'/>
              <StatusSection title='Active Account' description='Active the account' btnTitle='Active Account'/>
              <StatusSection title='Deactive Account' description='Deactive the account' btnTitle='Deactive Account'/>

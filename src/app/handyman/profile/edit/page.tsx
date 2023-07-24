@@ -25,7 +25,7 @@ const Page:React.FC<PageProps> = () => {
                  {/* TODO:Make this Responsive input fild */}
         <div className='bg-white  pb-3'>
             <div className='mb-3'>
-            <div className='grid grid-cols-12  items-center  min-w-[40rem] '>
+            <div className='grid grid-cols-1  sm:grid-cols-12  items-center  min-w-[40rem] '>
                 <InputBordered type='text' name='company_name' 
                 className='col-span-4' 
                 placeholder='Company Name'
@@ -46,7 +46,7 @@ const Page:React.FC<PageProps> = () => {
                  
                  /> */}
             </div>
-            <div className='grid grid-cols-12  items-center  min-w-[40rem]'>
+            <div className='grid grid-cols-1  sm:grid-cols-12  items-center  min-w-[40rem]'>
             <InputBordered type='text' name='address' 
                 className='col-span-8' 
                 placeholder='Address'

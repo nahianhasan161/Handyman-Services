@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react';
 import ReviewCart from '@/components/Admin/Cart/ReviewCart';
+import Typography from '@/components/Utilities/Typography';
+import HeadingType from '@/helper/enums/HeadingType';
 type PageProps = {
     
     
@@ -29,10 +31,15 @@ return  (
 
           {/* Heading Part */}
           <div>
-       <h1 className='text-xl md:text-2xl font-bold py-3'>Sent Offers</h1>
+       
+       <Typography 
+       Type={HeadingType.h1}
+       Description='Accepted Offers'
+
+       />
       </div>
       {/* Content Part */}
-          <div className='flex items-center gap-3 w-full'>
+          <div className='flex flex-col sm:flex-row items-center gap-3 w-full'>
             <div className='flex-1'>
               <ReviewCart Details={Details}  Logs={Logs} />
             </div>
