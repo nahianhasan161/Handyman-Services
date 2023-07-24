@@ -1,3 +1,5 @@
+import Typography from '@/components/Utilities/Typography';
+import HeadingType from '@/helper/enums/HeadingType';
 import React from 'react';
 
 type PageProps = {
@@ -12,7 +14,11 @@ const Page:React.FC<PageProps> = () => {
 
             {/* Heading Part */}
             <div>
-         <h1 className='text-xl md:text-2xl font-bold py-3'>Review Section</h1>
+        <Typography 
+        Type={HeadingType.h1}
+        Description='Un Accepted Offers'
+        className='font-bold'
+        />
         </div>
         {/* Content Part */}
             <div className='flex items-center gap-3 w-full'>

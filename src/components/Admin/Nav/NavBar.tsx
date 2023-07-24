@@ -31,14 +31,13 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
     return (
         <div>
             <nav className='p-5 border-2 box-shadown-bottom'>
-                <ul className='flex justify-between items-center font-bold text-md sm:text-lg'>
+                <ul className='flex justify-between gap-5 items-center font-bold text-md sm:text-lg'>
                    {/* <Link href={"/"}> */} <li className='flex items-center gap-1 cursor-pointer p-3  '
                    onClick={handleBack}
                    >
                        <span>
-                       <Image src={"/icons/left_arrow.svg"} alt='arrow_icon' width={40} height={40} className='w-5 sm:w-10'></Image>
-                    {/*  <BsArrowLeftShort size={40}/>  */}
-                     {/* <BsArrowLeft size={40}/>  */}
+                       <Image src={"/icons/left_arrow.svg"} alt='arrow_icon' width={40} height={40} className='min-w-[20px] sm:w-10'></Image>
+                    
                         </span> <label className='cursor-pointer'>Return</label> 
                     </li>
                     {/* </Link> */}
