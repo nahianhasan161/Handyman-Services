@@ -5,7 +5,8 @@ import Link from 'next/link';
 import Profile from '../../../public/avatar.png';
 import NotificationItem from './NotificationItem';
 type NotificationListProps = {
-    isShown:boolean 
+    isShown:boolean
+    
 };
 const NotificationList:React.FC<NotificationListProps> = ({isShown}) => {
     
@@ -13,7 +14,7 @@ const NotificationList:React.FC<NotificationListProps> = ({isShown}) => {
     return (<div>
        
 {isShown && (
-<div className="w-[20rem] absolute right-0 mt-2 bg-white rounded-md shadow-lg overflow-hidden z-20">
+<div className="w-[20rem] absolute right-0 mt-7 bg-white rounded-md shadow-lg overflow-hidden z-20">
     <div className="py-2">
        
 
