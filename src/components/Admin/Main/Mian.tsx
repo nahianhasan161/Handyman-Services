@@ -12,7 +12,7 @@ const Main:React.FC<MainProps> = () => {
   return (
     <div className=' h-screen flex flex-col m-10 '>
          
-            <div>
+            <div className='mb-3'>
            <Searchbar/>
         </div>
         <div>

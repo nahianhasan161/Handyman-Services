@@ -9,7 +9,7 @@ import LeftBar from "@/components/Admin/LeftBar/LeftBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Dashbord",
+title: "Admin Dashbord",
   description: "Admin Dashbord",
 };
 
@@ -24,7 +24,8 @@ export default function RootLayout({
     <html lang="en">
         
       <body className={inter.className}>
-      <main className=" min-h-screen w-fit md:w-auto">
+      {/* <main className=" min-h-screen w-fit md:w-auto"> */}
+      <main className=" min-h-screen min-w-fit">
         <div>
             <NavBar />
         </div>

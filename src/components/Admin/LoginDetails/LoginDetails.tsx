@@ -1,21 +1,26 @@
 import React, { ReactNode } from 'react';
 
 import Table from '../Table/Table';
+import Typography from '@/components/Utilities/Typography';
+import HeadingType from '@/helper/enums/HeadingType';
 type LoginDetailsProps = {
-    
+    titles:Array<string>,
+    informations:Array<Array<string>>,
     
 };
 
-const LoginDetails:React.FC<LoginDetailsProps> = () => {
+const LoginDetails:React.FC<LoginDetailsProps> = ({titles,informations}) => {
     
-    const titles = ["IP Address", "Login Date","Login Time"];
-    
-    const informations = [['106.76.96.0','26/5/2023','6:00PM']]
   return  (
     <div className=' h-screen flex flex-col m-10 '>
          
             <div>
-         <h1 className='text-xl md:text-2xl font-bold py-3'>Login Details</h1>
+         
+         <Typography 
+         Type={HeadingType.h1}
+         Description='Login Details'
+         className='font-bold'
+         />
         </div>
         <div>
            <Table titles={titles} informations={informations}/> 

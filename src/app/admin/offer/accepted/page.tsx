@@ -3,6 +3,9 @@ import {CgProfile} from "react-icons/cg";
 import Table from '@/components/Admin/Table/Table';
 import InputForm from '@/components/Admin/Input/InputForm';
 import ReviewCart from '@/components/Admin/Cart/ReviewCart';
+import Typography from '@/components/Utilities/Typography';
+import HeadingType from '@/helper/enums/HeadingType';
+import OffersSection from '@/components/Admin/Section/OffersSection';
 type PageProps = {
     
     
@@ -18,19 +21,16 @@ const Page:React.FC<PageProps> = () => {
     <div className=' h-screen flex flex-col m-10 '>
 
             {/* Heading Part */}
-            <div>
-         <h1 className='text-xl md:text-2xl font-bold py-3'>Accepted Offers</h1>
+            
+            <div className='py-3'>
+         <Typography Type={HeadingType.h1} Description='Accepted Offers' className='font-bold'/>
         </div>
         {/* Content Part */}
-            <div className='flex items-center gap-3 w-full'>
-              <div className='flex-1'>
-                <ReviewCart Details={Details}  Logs={Logs} Status='Accepted'/>
-              </div>
-              <div className='flex-1'>
-
-                <ReviewCart Details={Details}  Logs={Logs} Status='Accepted'/>
-              </div>
-            </div>
+           <OffersSection 
+           Details={Details} 
+           Logs={Logs}
+           Status='Accepted'
+           />
         </div>
         
     

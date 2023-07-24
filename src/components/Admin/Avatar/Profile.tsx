@@ -21,7 +21,7 @@ const Profile:React.FC<ProfileProps> = ({title,subtitle,image,link}) => {
          </Link>
         <div >
             <Link href={link} className='cursor-pointer '>
-            <h1 className='font-bold text-lg sm:text-xl md:text-2xl '>
+            <h1 className='font-bold text-md xs:text-lg sm:text-xl md:text-2xl '>
                 {title}
             </h1>
             </Link>

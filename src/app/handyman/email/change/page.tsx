@@ -8,11 +8,11 @@ type PageProps = {
 
 const Page:React.FC<PageProps> = () => {
     
-    const titles = ["IP Address", "Login Date","Login Time"];
-    
-    const informations = [['106.76.96.0','26/5/2023','6:00PM']]
+  
   return  (
-    <div className=' h-screen flex flex-col m-10 '>
+    <main>
+
+    <div className=' h-screen flex flex-col m-10 min-w-[20rem]'>
          
             <div>
          <h1 className='text-xl md:text-2xl font-bold py-3'>Changed Email</h1>
@@ -33,6 +33,7 @@ const Page:React.FC<PageProps> = () => {
         </div>
         </div>
     
+    </main>
   );
 }
 export default Page;

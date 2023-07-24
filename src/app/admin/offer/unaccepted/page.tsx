@@ -3,6 +3,7 @@ import {CgProfile} from "react-icons/cg";
 import Table from '@/components/Admin/Table/Table';
 import InputForm from '@/components/Admin/Input/InputForm';
 import ReviewCart from '@/components/Admin/Cart/ReviewCart';
+import OffersSection from '@/components/Admin/Section/OffersSection';
 type PageProps = {
     
     
@@ -22,7 +23,7 @@ const Page:React.FC<PageProps> = () => {
          <h1 className='text-xl md:text-2xl font-bold py-3'>Un Accepted Offers</h1>
         </div>
         {/* Content Part */}
-            <div className='flex items-center gap-3 w-full'>
+            {/* <div className='flex items-center gap-3 w-full'>
               <div className='flex-1'>
                 <ReviewCart Details={Details}  Logs={Logs} Status='Un accepted'/>
               </div>
@@ -30,7 +31,12 @@ const Page:React.FC<PageProps> = () => {
 
                 <ReviewCart Details={Details}  Logs={Logs} Status='Un accepted'/>
               </div>
-            </div>
+            </div> */}
+            <OffersSection 
+            Details={Details}
+            Logs={Logs}
+            Status='Un Accepted' 
+            />
         </div>
         
     

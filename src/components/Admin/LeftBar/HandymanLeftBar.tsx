@@ -97,14 +97,14 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
     </div>)}
     
 
-    <Link className="cursor-pointer flex items-center gap-5 pl-[5rem] my-3" href={"/logout"}>
+    <Link className="cursor-pointer flex items-center gap-2 sm:gap-5 pl-[5rem] my-3" href={"/logout"}>
                   <span>
 
                   <Image src="/icons/close-exit-logout-power-icon-1.png" alt="logout_icon" height={15} width={15}
-                  className='rounded-full outline outline-[10px] outline-[#E0DBDB]'
+                  className='rounded-full outline outline-[10px] outline-[#E0DBDB] min-w-5'
                   />
                   </span>
-                  <h1 className='  text-xl  font-bold  text-[#0E172C]'>
+                  <h1 className='  text-xl sm:text-lg  font-bold  text-[#0E172C]'>
                   Logout</h1></Link> 
     </div>
                   

@@ -11,6 +11,7 @@ import Item from '@/components/Admin/LeftBar/Item';
 import {AiOutlineMenu} from "react-icons/ai"
 import Image from 'next/image';
 import ActiveLink from '@/helper/enums/ActiveLink';
+import LogoutItem from '@/components/Admin/LeftBar/LogoutItem';
 
 
 type ClientLeftBarProps = {
@@ -21,29 +22,21 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
   
   
   const [isAction ,setIsActive] = useState("homepage");
-  const [show ,setShow] = useState(true);
+  
   const fullUrl = typeof window !== 'undefined' ? window.location.href : '';
   const currentPage = fullUrl.split("/client/").pop()
   console.log('Current page:', currentPage );
   return (
     <div className={` basis-1/4 bg-[#F2F8FF box-shadow-top`}>
     {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
-      {!show && 
-      <button className='' onClick={()=>{
-        setShow(!show)
-       }}>
-        <span className=''>
-        <AiOutlineMenu size={30}/>
-
-        </span>
-      </button>
-      }
-        {show && (<div className='py-5 pl-5 '>
+     
+      
+        <div className='py-5  '>
           
             <div className='flex justify-between align-items-center'>
 
              <Profile title='Paul Ben' subtitle='Wall Builder' image='/images/handymanAvatar.png' link='/handyman/email/change'/>
-              {/* close btn */}
+             
           
              {/* TODO:  MARGIN */}
             </div>
@@ -74,6 +67,11 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
                   icon={"security-unlock-password-protection-safety-icon-1.png"}
                   active={currentPage == ActiveLink.changePassword}
                   />  
+                  <Item link={"/client/offers/accepted"}
+                   title={"Accepted Offers"} 
+                  icon={"accept-approved-check-checked-confirm-icon-1.png"}
+                  active={currentPage == ActiveLink.changePassword}
+                  />  
                  <Item link={"/client/jobs/deleted"} 
                    title="Deleted Jobs" 
                    icon={"delete.svg"}  
@@ -91,18 +89,10 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
              {/* options */}
             {/* Handyman section */}
           
-    </div>)}
+    </div>
     
 
-    <Link className="cursor-pointer flex items-center gap-5 pl-[5rem] my-3" href={"/logout"}>
-                  <span>
-
-                  <Image src="/icons/close-exit-logout-power-icon-1.png" alt="logout_icon" height={15} width={15}
-                  className='rounded-full outline outline-[10px] outline-[#E0DBDB]'
-                  />
-                  </span>
-                  <h1 className='  text-xl  font-bold  text-[#0E172C]'>
-                  Logout</h1></Link> 
+    <LogoutItem/>
     </div>
                   
 );

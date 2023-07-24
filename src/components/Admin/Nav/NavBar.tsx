@@ -10,13 +10,16 @@ import avatarImg from "@/../public/avatar.png";
 import NotificationList from '@/components/Notification/NotificationList';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import ActionButton from '../Button/ActionButton';
 type NavBarProps = {
-  isMessage?:boolean
+  isMessage?:boolean,
+  isDeleteBtn?:boolean,
 };
 
-const NavBar:React.FC<NavBarProps> = ({isMessage=false}) => {
+const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
     const [noftify,setNoftify] = useState(false);
     const [message,setMessage] = useState(false);
+
     const router = useRouter();
     
 
@@ -27,20 +30,18 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false}) => {
     return (
         <div>
             <nav className='p-5 border-2 box-shadown-bottom'>
-                <ul className='flex justify-between items-center font-bold  text-lg'>
+                <ul className='flex justify-between items-center font-bold text-md sm:text-lg'>
                    {/* <Link href={"/"}> */} <li className='flex items-center gap-1 cursor-pointer p-3  '
                    onClick={handleBack}
                    >
                        <span>
-                       <Image src={"/icons/left_arrow.svg"} alt='arrow_icon' width={40} height={40}></Image>
+                       <Image src={"/icons/left_arrow.svg"} alt='arrow_icon' width={40} height={40} className='w-5 sm:w-10'></Image>
                     {/*  <BsArrowLeftShort size={40}/>  */}
                      {/* <BsArrowLeft size={40}/>  */}
                         </span> <label className='cursor-pointer'>Return</label> 
                     </li>
                     {/* </Link> */}
-                    <Link href={"/admin"}> <li className='font-bold cursor-pointer' onClick={()=>{
-                        
-                    }}>
+                    <Link href={"/admin"}> <li className='font-bold cursor-pointer text-sm sm:text-md md:text-lg'>
                         Dashboard
                     </li>
                     </Link>
@@ -60,7 +61,7 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false}) => {
                             >
                            
                           
-                          <Image src="/icons/messageIcon.svg" alt='bell_icon' width={30} height={30}></Image>
+                          <Image src="/icons/messageIcon.svg" alt='bell_icon' width={30} height={30} className='min-w-[5px]'></Image>
                             
                         </button>
                       </div>)}
@@ -79,15 +80,20 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false}) => {
                             >
                            
                           
-                          <Image src="/icons/ring_icon.png" alt='bell_icon' width={30} height={30}></Image>
+                          <Image src="/icons/ring_icon.png" alt='bell_icon' width={30} height={30} className='min-w-[5px]'></Image>
                             
                         </button>
                       </div>
-                          <div className=''>
-                           
+                      
+                      <div>
+                          { isDeleteBtn && (<ActionButton title='Delete Account' className=''/>)}
+                      </div>
+                          <div>
                                 {isMessage &&   <NotificationList isShown={message}/> }
                             
                               <NotificationList isShown={noftify}/>
+
+
                             
                           </div>
                         </div>

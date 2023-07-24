@@ -8,8 +8,8 @@ import ClientLeftBar from "@/components/Client/LeftBar/ClientLeftBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Dashbord",
-  description: "Admin Dashbord",
+  title: "Client Dashbord",
+  description: "Client Dashbord",
 };
 
 export default function RootLayout({
@@ -23,9 +23,9 @@ export default function RootLayout({
     <html lang="en">
         
       <body className={inter.className}>
-      <main className=" min-h-screen w-fit md:w-auto">
+      <main className=" min-h-screen min-w-fit">
         <div>
-            <NavBar isMessage={true}/>
+            <NavBar isMessage={true} isDeleteBtn={true}/>
         </div>
         <div className='flex'>
             

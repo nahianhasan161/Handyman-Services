@@ -12,11 +12,11 @@ const Page:React.FC<PageProps> = () => {
     
    
   return  (
-    <main className=' h-screen flex flex-col m-10 '>
+    <main className=' h-screen flex flex-col m-10 min-w-[18rem]'>
          
-         <section className='p-5 bg-white'>
+         <section className='p-5 '>
           <div>
-            Work in Progress...
+          <ActionButton className='p-12' title='+ Add New Job'/>
           </div>
         </section>
         </main>

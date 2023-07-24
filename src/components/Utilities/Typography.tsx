@@ -5,17 +5,17 @@ import FontWeight from "@/helper/enums/FontWeight";
 
 type TypographyProps = {
    Type:HeadingType,
-   Weight?:FontWeight
+   className?:string,
    Description:string,
    
 
 };
-const Typography:React.FC<TypographyProps> = ({Type,Description,Weight}) => {
+const Typography:React.FC<TypographyProps> = ({Type,Description,className}) => {
     
     
     return(
         <>
-        {(Type == HeadingType.h1)&& (<h1 className={`${ Weight == FontWeight.base ? FontWeight.base :  FontWeight.bold   } font-bold text-lg sm:text-xl md:text-2xl`} > {Description}</h1>)}
+        {(Type == HeadingType.h1)&& (<h1 className={`${ className } font-bold text-lg sm:text-xl md:text-2xl`} > {Description}</h1>)}
         </>
     );
 }

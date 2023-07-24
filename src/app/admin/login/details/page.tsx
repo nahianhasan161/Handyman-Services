@@ -11,13 +11,19 @@ type pageProps = {
 
 const page:React.FC<pageProps> = () => {
     
+  const titles = ["IP Address", "Login Date","Login Time"];
+    
+  const informations = [['106.76.96.0','26/5/2023','6:00PM']]
     
     
     return (
         
         <main className="">
        
-          <LoginDetails/>
+          <LoginDetails
+          titles={titles}
+          informations={informations}
+          />
 
            
 
