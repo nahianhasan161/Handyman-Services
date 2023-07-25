@@ -14,7 +14,9 @@ const ProfileSection:React.FC<ProfileSectionProps> = () => {
 
          
             <div className='bottom-0 right-0 relative max-w-[7rem]'>
-                <ProfileImage image='/images/handymanAvatar.png'/>
+                <ProfileImage  image='/images/handymanAvatar.png'
+                className="max-w-[100px]"
+                />
                
                 <Image src="/icons/edit-image-icon-1.png"
                  className='absolute bottom-[5px] right-[15px]' alt="camera_icon" height={30} width={30}/>

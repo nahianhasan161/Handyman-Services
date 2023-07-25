@@ -34,12 +34,14 @@ export default function RootLayout({
                 
     
                 <HandymanLeftBar />
-           
-            <div className="w-full basis-3/4 flex-grow bg-[#F2F8FF] sm:min-h-screen min-h-[200vh]" >
+                <div className="w-full sm:basis-3/4 flex-grow  min-h-screen bg-[#F2F8FF]" >
+              <div className="ml-[1px] pt-2 sm:pt-5 md:pt-10 pl-2 sm:pl-5 md:pl-10 ">
+            
            {children}
 
            
 
+            </div>
             </div>
         </div>
         </main>

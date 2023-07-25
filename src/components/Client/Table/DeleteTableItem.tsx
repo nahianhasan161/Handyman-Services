@@ -22,8 +22,8 @@ const DeleteTableItem:React.FC<DeleteTableItemProps> = ({title,date,time}) => {
               <p className="font-bold col-span-1 col-start-11 sm:col-start-12
                 "
                >
-                {/* TODO:Circle pointer not responsive on mobile view */}
-                <StatusSpan title="Deleted" />
+                
+                <StatusSpan title="Deleted" className="ml-0" />
                 
                 </p>
         </div>

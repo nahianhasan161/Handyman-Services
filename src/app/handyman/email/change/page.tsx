@@ -15,7 +15,7 @@ const Page:React.FC<PageProps> = () => {
   return  (
     <main>
 
-    <div className=' h-screen flex flex-col m-10 min-w-[20rem]'>
+    <div className=' h-screen flex flex-col '>
          
             <div>
          <Typography 

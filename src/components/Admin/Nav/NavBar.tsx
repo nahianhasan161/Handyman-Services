@@ -43,7 +43,7 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
                         </span> <label className='cursor-pointer sm:text-base text-xs sm:text-md'>Return</label> 
                     </li>
                     {/* </Link> */}
-                    <NavTitle title=""/>
+                    <NavTitle title="Dashbord" link='"/admin"'/>
                     <li>
                         <div className=' flex gap-1 sm:gap-5'>
                      {/* message */}
