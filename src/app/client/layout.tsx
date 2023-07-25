@@ -33,7 +33,7 @@ export default function RootLayout({
     
                 <ClientLeftBar />
            
-            <div className="w-full basis-3/4 flex-grow bg-[#F2F8FF] " >
+            <div className="w-full basis-3/4 flex-grow bg-[#F2F8FF] min-h-[200vh] sm:min-h-screen" >
            {children}
 
            

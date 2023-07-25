@@ -23,7 +23,7 @@ const ProfileSection:React.FC<ProfileSectionProps> = () => {
                  
         <div className='bg-white  pb-3'>
             <div className='mb-3'>
-            <div className='grid grid-cols-1  sm:grid-cols-12  items-center  min-w-[40rem] '>
+            <div className='grid grid-cols-1  sm:grid-cols-12  items-center  min-w-[15rem] '>
                 <InputBordered type='text' name='company_name' 
                 className='col-span-4' 
                 placeholder='Company Name'
@@ -40,7 +40,7 @@ const ProfileSection:React.FC<ProfileSectionProps> = () => {
                 
              
             </div>
-            <div className='grid grid-cols-1  sm:grid-cols-12  items-center  min-w-[40rem]'>
+            <div className='grid grid-cols-1  sm:grid-cols-12  items-center  min-w-[15rem]'>
             <InputBordered type='text' name='address' 
                 className='col-span-8' 
                 placeholder='Address'

@@ -13,12 +13,14 @@ const Page:React.FC<PageProps> = () => {
    
   return  (
     <main className=' m-10 p-5'>
-         
+         <div className='h-[150vh] sm:h-screen'>
+
          
          
           <ActionButton className='p-12' title='+ Add New Job'/>
           
         
+         </div>
         </main>
     
   );

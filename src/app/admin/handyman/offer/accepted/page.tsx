@@ -15,14 +15,14 @@ const Page:React.FC<PageProps> = () => {
     
     const Logs = ['Posted on','26/5/2023','6:00PM']
   return  (
-    <div className=' h-screen flex flex-col m-10 '>
+    <div className='  m-10 '>
 
             {/* Heading Part */}
             <div>
          <h1 className='text-xl md:text-2xl font-bold py-3'>Accepted Offers</h1>
         </div>
         {/* Content Part */}
-            <div className='flex items-center gap-3 w-full'>
+            <div className='flex items-center gap-3 w-full flex-col sm:flex-row'>
               <div className='flex-1'>
                 <ReviewCart Details={Details}  Logs={Logs} Status='Accepted'/>
               </div>
