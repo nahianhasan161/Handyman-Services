@@ -11,14 +11,14 @@ const MessageItem:React.FC<MessageItemProps> = ({name,time,description}) => {
     
     return (
         <div>
-        <div className='my-3 flex items-center justify-between max-w-[15rem]'>
+        <div className='my-3 flex items-center justify-between '>
             <h1 className='font-bold'>{name}</h1>
            
             <span className='text-xs text-offwhite_400'> 
             <StatusSpan title={time}/>
             </span>
         </div>
-        <p className='text-xs text-offwhite_50'> {description}</p>
+        <p className='text-xs text-offwhite_50 ml-1'> {description}</p>
 </div>
 )
 }

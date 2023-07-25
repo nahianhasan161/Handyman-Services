@@ -12,8 +12,8 @@ const Page:React.FC<PageProps> = () => {
     
    
   return  (
-    <main className=' m-10 p-5'>
-         <div className='h-[150vh] sm:h-screen'>
+    <main className=' sm:m-10 p-5'>
+         <div className=' '>
 
          
          

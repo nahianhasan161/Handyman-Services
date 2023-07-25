@@ -26,7 +26,7 @@ const ReviewCart:React.FC<ReviewCartProps> = ({Details,Status,Logs}) => {
                 <p className='text-xs pb-2 max-w-[14rem]'>{Detail[1]}</p>
                 </>
                )}
-               <p className='flex gap-9 items-center text-xs whitespace-nowrap '>{Logs.map((Log,key)=> <span key={key} className={`${key == 0 ? 'font-bold': ''}`}>{Log}</span> )}</p>
+               <p className='flex gap-[0.5rem] sm:gap-5 lg:gap-9 items-center text-xs whitespace-nowrap '>{Logs.map((Log,key)=> <span key={key} className={`${key == 0 ? 'font-bold': ''}`}>{Log}</span> )}</p>
             </div>
             <div className='text-center  pt-2'>
                 <Button title='Edit Review' />

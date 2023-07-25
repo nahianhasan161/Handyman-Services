@@ -10,24 +10,14 @@ type PageProps = {
 const Page:React.FC<PageProps> = () => {
     
    
- /*  return  (
-    <main className=' h-screen flex flex-col m-10 '>
-         
-         <section className='p-5 bg-white'>
-          <div>
-            Work in Progress...
-          </div>
-        </section>
-        </main>
-    
-  ); */
+ 
 
   const Details = [["IP Address",'106.76.96.0'], ["Login Date",'26/5/2023'],["Login Time",'6:00PM']];
     
     
   const Logs = ['Posted on','26/5/2023','6:00PM']
 return  (
-  <div className=' h-screen flex flex-col m-10 '>
+  <div className=' h-screen flex flex-col m-2 md:m-5 lg:m-10 '>
 
           {/* Heading Part */}
           <div>

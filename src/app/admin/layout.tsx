@@ -25,7 +25,7 @@ export default function RootLayout({
         
       <body className={inter.className}>
       {/* <main className=" min-h-screen w-fit md:w-auto"> */}
-      <main className=" min-h-screen min-w-fit">
+      <main className=" min-h-screen ">
         <div>
             <NavBar />
         </div>
@@ -35,7 +35,7 @@ export default function RootLayout({
     
                 <LeftBar />
            
-            <div className="w-full basis-3/4 flex-grow bg-[#F2F8FF] " >
+            <div className="w-full sm:basis-3/4 flex-grow bg-[#F2F8FF] " >
            {children}
 
            

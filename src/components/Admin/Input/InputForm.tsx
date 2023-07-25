@@ -15,7 +15,7 @@ const InputForm:React.FC<InputFormProps> = ({title,type,placeholder,className,na
     return (<div className='bg-white p-3'>
 
         <div>
-            {title && (<label htmlFor={name} className='Whitespace-nowrap block py-3 font-medium'>{title}</label>)}
+            {title && (<label htmlFor={name} className='Whitespace-nowrap block py-3 fond-xs sm:font-sm md:font-medium'>{title}</label>)}
             <input type={type} name={name} placeholder={placeholder}
             className={`${className} p-3 font-medium text-offwhite-400 input-border rounded-[8px] w-full`}
             />

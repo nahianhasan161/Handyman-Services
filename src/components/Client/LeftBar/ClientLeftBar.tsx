@@ -12,6 +12,7 @@ import {AiOutlineMenu} from "react-icons/ai"
 import Image from 'next/image';
 import ActiveLink from '@/helper/enums/ActiveLink';
 import LogoutItem from '@/components/Admin/LeftBar/LogoutItem';
+import { RxHamburgerMenu } from 'react-icons/rx';
 
 
 type ClientLeftBarProps = {
@@ -22,15 +23,17 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
   
   
   const [isAction ,setIsActive] = useState("homepage");
+  const [expand,isExpend] = useState(false);
   
   const fullUrl = typeof window !== 'undefined' ? window.location.href : '';
   const currentPage = fullUrl.split("/client/").pop()
   console.log('Current page:', currentPage );
   return (
-    <div className={` basis-1/4 bg-[#F2F8FF box-shadow-top`}>
+    <div className={` sm:basis-1/4  box-shadow-top`}>
     {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
      
-      
+                {/* menu */}
+                 {/* <span className=''> <RxHamburgerMenu  /></span>  */}
         <div className='py-5  '>
           
             <div className='flex justify-between align-items-center'>
@@ -43,9 +46,8 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
             <div className=''>
             {/* Items section */}
             
-            <div className='my-3 sm:my-5 md:my-7 pl-2 sm:pl-5 md:pl-8'>
+            <div className='my-3 sm:my-5 md:my-7  sm:pl-5 md:pl-8'>
                 <ul>
-                  
                   <Item link={'/client/handyman/find'}
                    title="Find Handyman"
                    icon={"handyman_find.svg"}
@@ -92,7 +94,7 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
     </div>
     
 
-    <LogoutItem/>
+    {/* <LogoutItem/> */}
     </div>
                   
 );

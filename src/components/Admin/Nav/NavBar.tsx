@@ -11,6 +11,8 @@ import NotificationList from '@/components/Notification/NotificationList';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import ActionButton from '../Button/ActionButton';
+import DeleteBtn from './DeleteBtn';
+import NavTitle from './NavTitle';
 type NavBarProps = {
   isMessage?:boolean,
   isDeleteBtn?:boolean,
@@ -30,7 +32,7 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
 
     return (
         <div>
-            <nav className='p-5 border-2 box-shadown-bottom'>
+            <nav className='sm:p-5 border-2 box-shadown-bottom'>
                 <ul className='flex justify-between gap-5 items-center font-bold text-md sm:text-lg'>
                    {/* <Link href={"/"}> */} <li className='flex items-center gap-1 cursor-pointer p-3  '
                    onClick={handleBack}
@@ -38,19 +40,19 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
                        <span>
                        <Image src={"/icons/left_arrow.svg"} alt='arrow_icon' width={40} height={40} className='min-w-[20px] sm:w-10'></Image>
                     
-                        </span> <label className='cursor-pointer'>Return</label> 
+                        </span> <label className='cursor-pointer sm:text-base text-xs sm:text-md'>Return</label> 
                     </li>
                     {/* </Link> */}
-                    <Link href={"/admin"}> <li className='font-bold cursor-pointer text-sm sm:text-md md:text-lg'>
-                        Dashboard
-                    </li>
-                    </Link>
+                    <NavTitle title=""/>
                     <li>
-                        <div className=' flex gap-5'>
+                        <div className=' flex gap-1 sm:gap-5'>
                      {/* message */}
                          {isMessage && (<div className="relative inline-flex w-fit active:bg-slate-400  rounded ">
                           <div
-                            className="absolute bottom-auto left-auto right-0 top-0 z-10 inline-block -translate-y-1/2 translate-x-2/4 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 whitespace-nowrap rounded-full bg-orange-400 px-2.5 py-1 text-center align-baseline text-xs font-bold leading-none text-white">
+                            className="absolute bottom-auto left-auto right-0 top-2 sm:top-0 z-10
+                             inline-block -translate-y-1/2 translate-x-2/4 rotate-0 skew-x-0 skew-y-0 scale-x-100
+                              scale-y-100 whitespace-nowrap rounded-full bg-orange-400 px-1.5 sm:px-2.5 py-1 
+                              text-center align-baseline text-xs font-bold leading-none text-white">
                             3
                           </div>
                           <button type="button"
@@ -68,7 +70,11 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
 {/* notify */}
                         <div className="relative inline-flex w-fit active:bg-slate-400  rounded ">
                           <div
-                            className="absolute bottom-auto left-auto right-0 top-0 z-10 inline-block -translate-y-1/2 translate-x-2/4 rotate-0 skew-x-0 skew-y-0 scale-x-100 scale-y-100 whitespace-nowrap rounded-full bg-orange-400 px-2.5 py-1 text-center align-baseline text-xs font-bold leading-none text-white">
+                            className="absolute bottom-auto
+                             left-auto right-0 top-2  sm:top-0 z-10 inline-block 
+                             -translate-y-1/2 translate-x-2/4 rotate-0 skew-x-0 skew-y-0 scale-x-100 
+                             scale-y-100 whitespace-nowrap rounded-full bg-orange-400 px-1.5 sm:px-2.5  py-1 
+                             text-center align-baseline text-xs font-bold leading-none text-white">
                             4
                           </div>
                           <button
@@ -86,7 +92,7 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
                       </div>
                       
                       <div>
-                          { isDeleteBtn && (<ActionButton title='Delete Account' className=''/>)}
+                          { isDeleteBtn && (<DeleteBtn title='Delete Account'/>)}
                       </div>
                           <div>
                                 {isMessage &&   <NotificationList isShown={message}/> }

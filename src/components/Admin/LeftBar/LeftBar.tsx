@@ -21,7 +21,7 @@ const LeftBar:React.FC<LeftBarProps> = () => {
   const [isAction ,setIsActive] = useState("homepage");
   
   return (
-    <div className={` basis-1/4 bg-[#F2F8FF box-shadow-top`}>
+    <div className={` sm:basis-1/4 bg-[#F2F8FF box-shadow-top`}>
     {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
       
      
@@ -37,7 +37,7 @@ const LeftBar:React.FC<LeftBarProps> = () => {
             <div className=''>
             {/* client section */}
               <h1 className=" my-5 ml-5 md:ml-7 text-sm md:text-xl font-bold whitespace-nowrap">Client Section</h1>
-            <div className='my-3 sm:my-5 md:my-7 pl-2 sm:pl-5 md:pl-8'>
+            <div className='my-3 sm:my-5 md:my-7  sm:pl-5 md:pl-8'>
                 <ul>
                  
                   <Item link={'/admin'} title="Client Profile" active={"homepage" == isAction} icon={"account-avatar-head-person-profile-icon-2.png"}/>

@@ -13,9 +13,9 @@ const Page:React.FC<PageProps> = () => {
     
    
   return  (
-    <main className=' h-screen flex flex-col m-10 '>
+    <main className=' h-screen flex flex-col  '>
          
-         <section className='p-5 bg-white mt-10 mx-3 py-10'>
+         <section className='p-5 bg-white mt-10  py-2 sm:py-5 lg:py-10'>
          <div >
          
          <InputRow 
