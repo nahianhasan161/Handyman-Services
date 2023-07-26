@@ -7,8 +7,8 @@ type MainProps = {
 };
 
 const Main:React.FC<MainProps> = () => {
-    const titles = ['Address','Phone Number','Email Address','Email Address',]
- const informations = [['Awsome Street Mr. Bones','01987462342','awsome@gmail.com','awsome@gmail.com'],['Awsome Street Mr. Bones','01987462342','awsome@gmail.com'],['The Sliding Mr. Bones','01987462342','shaoyo@gmail.com'],["The Sliding Mr. Bones","0183847593",'shiningstar@gmail.com']] 
+    const titles = ['Address','Phone Number','Email Address',]
+ const informations = [['Awsome Street Mr. Bones','01987462342','awsome@gmail.com'],['The Sliding Mr. Bones','01987462342','shaoyo@gmail.com'],["The Sliding Mr. Bones","0183847593",'shiningstar@gmail.com']] 
   return (
     <div className='space-y-4 h-screen'>
          
