@@ -12,7 +12,7 @@ type LoginDetailsProps = {
 const LoginDetails:React.FC<LoginDetailsProps> = ({titles,informations}) => {
     
   return  (
-    <div className=' flex flex-col  '>
+    <div className='  '>
          
             <div>
          

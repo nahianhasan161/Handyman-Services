@@ -9,9 +9,10 @@ type ProfileProps = {
     subtitle:string,
     image:string,
     link:string,
+    textClassName?:string
 };
 
-const Profile:React.FC<ProfileProps> = ({title,subtitle,image,link}) => {
+const Profile:React.FC<ProfileProps> = ({title,subtitle,image,link,textClassName}) => {
     
     return (
         <div className=" group  flex items-center sm:gap-3  gap-1">
@@ -19,7 +20,7 @@ const Profile:React.FC<ProfileProps> = ({title,subtitle,image,link}) => {
         <Link href={link} className=''>
         <ProfileImage image={image}/>
          </Link>
-        <div >
+        <div className={`${textClassName} sm:block `}>
             <Link href={link} className='cursor-pointer '>
             <h1 className='font-bold  text-[10px] xs:text-lg sm:text-xl md:text-2xl '>
                 {title}

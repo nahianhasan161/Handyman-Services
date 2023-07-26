@@ -18,7 +18,7 @@ const page:React.FC<pageProps> = () => {
     
     return (
         
-        <main className="">
+        <main className="space-y-4 h-screen">
        
           <LoginDetails
           titles={titles}

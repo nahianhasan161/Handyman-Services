@@ -17,7 +17,7 @@ const InputBordered:React.FC<InputBorderedProps> = ({type,placeholder,className,
         
             
             <input type={type} name={name} placeholder={placeholder}
-            className={`${className}  border p-3 text-offwhite-400 font-medium   placeholder-offwhite-400`}
+            className={`${className}  text-sm sm:text-base border p-2 sm:p-3 text-offwhite-400 font-medium   placeholder-offwhite-400`}
             />
         
         

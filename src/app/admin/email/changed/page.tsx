@@ -12,7 +12,7 @@ const Page:React.FC<PageProps> = () => {
     
   
   return  (
-    <div className=' h-screen flex flex-col  '>
+    <div className='space-y-4 h-screen  '>
          
             <div>
          <h1 className='text-md sm:text-lg md:text-2xl font-bold py-3'>Changed Email</h1>
