@@ -8,10 +8,10 @@ type SearchBarProps = {
 const SearchBar:React.FC<SearchBarProps> = () => {
     
     return (<div>
-        <div className='bg-white m-1 md:p-1 md:m-3 rounded-[16px]  shadow-bottom'>
+       
 
-        <form className='flex  items-center   md:gap-3'>
-            <div  className='flex items-center  gap-3 border-r-2  md:p-2 w-full'>
+        <form className='flex  items-center md:gap-3 bg-white m-1 md:p-1 md:m-3 rounded-[16px]  shadow-bottom'>
+            <div  className='flex items-center  xs:gap-3 border-r-2  md:p-2 w-full'>
                 <label htmlFor='search '>
                     <Image src={"/icons/search.png"} alt='search_icon' height={16} width={16}></Image>
                 </label>
@@ -20,10 +20,10 @@ const SearchBar:React.FC<SearchBarProps> = () => {
                  placeholder='Search By Email,Company Name or ListingId...'/>
             </div>
             <div>
-                <button className=' px-2 sm:w-max w-full  border-[#00000033] text-offwhite-400 text-xs whitespace-nowrap '>Find a Profile</button>
+                <button className=' sm:px-2 sm:w-max w-full  border-[#00000033] text-offwhite-400 text-xs sm:whitespace-nowrap '>Find a Profile</button>
             </div>
         </form>
-        </div>
+       
     </div>)
 }
 export default SearchBar;

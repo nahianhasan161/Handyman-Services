@@ -19,7 +19,7 @@ const OrderItem:React.FC<OrderItemProps> = ({title,time,date,description,amount}
        
         <p className='text-xs text-offwhite_50'> {description}</p>
         <p className='font-medium'>{amount}</p>
-        <div className='text-xs flex items-center gap-8'>
+        <div className='text-xs flex items-center gap-5 sm:gap-8'>
             <span>Posted on</span> 
             <span className='text-offwhite_50'>{date}</span>
             <span className='text-offwhite_50'>{time}</span>

@@ -11,7 +11,7 @@ const Page:React.FC<PageProps> = () => {
     
    
   return  (
-    <div className='flex flex-col m-10 text-offwhite_50'>
+    <div className='flex flex-col  text-offwhite_50'>
          
         <div className=' sm:p-5 p-3'>
             

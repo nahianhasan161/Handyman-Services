@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
         
       <body className={inter.className}>
-      <main className=" min-h-screen min-w-fit">
+      <main className=" min-h-screen ">
         <div>
             <NavBar isMessage={true} />
         </div>
@@ -34,7 +34,7 @@ export default function RootLayout({
                 
     
                 <HandymanLeftBar />
-                <div className="w-full sm:basis-3/4 flex-grow  min-h-screen bg-[#F2F8FF]" >
+                <div className="w-full sm:basis-3/4 flex-grow  min-h-screen bg-[#F2F8FF]  min-w-[0]" >
               <div className="ml-[1px] pt-2 sm:pt-5 md:pt-10 pl-2 sm:pl-5 md:pl-10 ">
             
            {children}

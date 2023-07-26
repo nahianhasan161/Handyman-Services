@@ -94,7 +94,7 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
     </div>
     
 
-    {/* <LogoutItem/> */}
+    <LogoutItem/>
     </div>
                   
 );

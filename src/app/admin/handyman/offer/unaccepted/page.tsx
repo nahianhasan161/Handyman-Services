@@ -17,7 +17,7 @@ const Page:React.FC<PageProps> = () => {
     
     const Logs = ['Posted on','26/5/2023','6:00PM']
   return  (
-    <div className='m-10 '>
+    <div className=' '>
 
             {/* Heading Part */}
             <div>

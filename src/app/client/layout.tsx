@@ -27,13 +27,13 @@ export default function RootLayout({
         <div>
             <NavBar isMessage={true} isDeleteBtn={true}/>
         </div>
-        <div className='flex'>
+        <div className='flex '>
             
                 
     
                 <ClientLeftBar />
            
-            <div className="w-full sm:basis-3/4 flex-grow  min-h-screen bg-[#F2F8FF]" >
+            <div className="w-full sm:basis-3/4 flex-grow  min-h-screen bg-[#F2F8FF]  min-w-[0]" >
               <div className="ml-[1px] pt-2 sm:pt-5 md:pt-10 pl-2 sm:pl-5 md:pl-10 ">
 
            {children}

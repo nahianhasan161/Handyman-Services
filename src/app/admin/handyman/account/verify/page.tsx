@@ -9,7 +9,7 @@ type PageProps = {
 const Page:React.FC<PageProps> = () => {
    
   return  (
-    <div className=' h-screen flex flex-col m-10 '>
+    <div className=' h-screen flex flex-col  '>
 
           
         {/* Content Part */}

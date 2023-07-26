@@ -14,7 +14,7 @@ const Page:React.FC<PageProps> = () => {
     
     const informations = [['Laying tiles: 25m2; Floor in bathroom, kitchen, hall 25km, Berlin','329765','22/05/2023']]
   return  (
-    <div className=' h-screen flex flex-col m-10 '>
+    <div className=' h-screen flex flex-col  '>
          
             <div>
         

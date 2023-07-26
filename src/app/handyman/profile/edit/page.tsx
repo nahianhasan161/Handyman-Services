@@ -14,8 +14,8 @@ const Page:React.FC<PageProps> = () => {
     
     
   return  (
-    <div className=' h-screen flex flex-col m-10 '>
-        <ProfileSection/>
+    <div className=' h-screen flex flex-col '>
+        <ProfileSection imageClassName='min-w-[6rem]'/>
         </div>
     
   );

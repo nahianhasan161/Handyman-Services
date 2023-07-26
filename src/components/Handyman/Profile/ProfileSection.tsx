@@ -5,17 +5,17 @@ import Image from 'next/image';
 import React from 'react';
 
 type ProfileSectionProps = {
-    
+    imageClassName?:string,
 };
 
-const ProfileSection:React.FC<ProfileSectionProps> = () => {
+const ProfileSection:React.FC<ProfileSectionProps> = ({imageClassName}) => {
     
     return ( <>
 
          
             <div className='bottom-0 right-0 relative max-w-[7rem]'>
                 <ProfileImage  image='/images/handymanAvatar.png'
-                className="max-w-[100px]"
+                className={`${imageClassName} max-w-[100px]`}
                 />
                
                 <Image src="/icons/edit-image-icon-1.png"
@@ -25,7 +25,7 @@ const ProfileSection:React.FC<ProfileSectionProps> = () => {
                  
         <div className='bg-white  pb-3'>
             <div className='mb-3'>
-            <div className='grid grid-cols-1  sm:grid-cols-12  items-center  min-w-[15rem] '>
+            <div className='grid grid-cols-1  sm:grid-cols-12  items-center   '>
                 <InputBordered type='text' name='company_name' 
                 className='col-span-4' 
                 placeholder='Company Name'
@@ -42,7 +42,7 @@ const ProfileSection:React.FC<ProfileSectionProps> = () => {
                 
              
             </div>
-            <div className='grid grid-cols-1  sm:grid-cols-12  items-center  min-w-[15rem]'>
+            <div className='grid grid-cols-1  sm:grid-cols-12  items-center  '>
             <InputBordered type='text' name='address' 
                 className='col-span-8' 
                 placeholder='Address'

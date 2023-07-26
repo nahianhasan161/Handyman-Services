@@ -12,7 +12,7 @@ type LoginDetailsProps = {
 const LoginDetails:React.FC<LoginDetailsProps> = ({titles,informations}) => {
     
   return  (
-    <div className=' h-screen flex flex-col m-10 '>
+    <div className=' flex flex-col  '>
          
             <div>
          

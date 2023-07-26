@@ -9,11 +9,11 @@ type TableProps = {
 const Table:React.FC<TableProps> = ({titles,informations}) => {
     
     
-    return (<div>
+    return (<div className='overflow-x-auto  shadow '>
         <table className="table-auto border-2 w-full text-[#0E172C]">
   <thead className='border-2 bg-[#F0EAEA] '>
     <tr className='font-bold text-base'>
-    {titles && (titles.map((title,index) => <th className='p-5' key={index}>{title}</th>))}
+    {titles && (titles.map((title,index) => <th className='text-xs sm:text-base p-1 sm:p-3 md:p-5' key={index}>{title}</th>))}
       
     </tr>
   </thead>

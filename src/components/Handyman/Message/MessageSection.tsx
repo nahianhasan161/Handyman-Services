@@ -1,32 +1,18 @@
 import React from 'react';
-import Image from 'next/image';
-import MessageItem from './MessageItem';
+
+import MessageList from '@/components/Client/Section/MessageList';
 type MessageSectionProps = {
     
 };
 
 const MessageSection:React.FC<MessageSectionProps> = () => {
     
-    return ( <div className=' grid grid-cols-12 min-w-[20rem]'>
-            
-    <div className=' col-span-10 '>
-      <MessageItem name='Jhon Smit'
-       time="5 hours ago" 
-       description='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-      the industry&apos;s standard dummy text'
-      />
-      <MessageItem name='Jhon Chena'
-       time="5 hours ago" 
-       description='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-      the industry&apos;s standard dummy text'
-      />
-
-    </div>
-
-    <div className='flex flex-col justify-center col-start-12 col-span-1 '>
-    <Image src={"/icons/uparrow.svg"} className='cursor-pointer' alt='up_icon' width={30} height={30}/>
-    <Image src={"/icons/downarrow.svg"} className='cursor-pointer' alt='up_icon' width={30} height={30}/>
-    </div>
-  </div>)
-}
+    return (  <main className='  flex flex-col'>
+         
+    <section className='p-5 bg-white'>
+  
+     <MessageList/>
+   </section>
+   </main>
+)}
 export default MessageSection;

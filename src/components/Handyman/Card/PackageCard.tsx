@@ -9,7 +9,7 @@ type PackageCardProps = {
 const PackageCard:React.FC<PackageCardProps> = ({title,amount,className}) => {
     
     return (
-        <div className={`${className} bg-white flex flex-col items-center justify-between shadow-xl p-5 max-w-[17rem]  space-y-8`}>
+        <div className={`${className} bg-white flex flex-col items-center justify-between shadow-xl p-5 max-w-[17rem] min-w-[10rem]  space-y-8`}>
 
                    <div className='space-y-4 text-center'>
                     <h1 className='font-bold text-xl max-w-[7rem]'>{title}</h1>

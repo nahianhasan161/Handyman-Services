@@ -22,7 +22,7 @@ const LeftBar:React.FC<LeftBarProps> = () => {
   
   return (
     <div className={` sm:basis-1/4 bg-[#F2F8FF box-shadow-top`}>
-    {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
+    
       
      
       
@@ -36,7 +36,7 @@ const LeftBar:React.FC<LeftBarProps> = () => {
             </div>
             <div className=''>
             {/* client section */}
-              <h1 className=" my-5 ml-5 md:ml-7 text-sm md:text-xl font-bold whitespace-nowrap">Client Section</h1>
+              <h1 className=" my-5 ml-1 sm:ml-5 md:ml-7 text-xs sm:text-sm md:text-xl font-bold whitespace-nowrap">Client Section</h1>
             <div className='my-3 sm:my-5 md:my-7  sm:pl-5 md:pl-8'>
                 <ul>
                  
@@ -54,7 +54,7 @@ const LeftBar:React.FC<LeftBarProps> = () => {
              {/* options */}
             {/* Handyman section */}
             <div className='my-2 '>
-            <h1 className=" my-3 ml-7 text-sm md:text-xl font-bold">Handyman Section</h1>
+            <h1 className=" my-3  ml-1 sm:ml-5 md:ml-7 text-xs sm:text:lg md:text-xl font-bold">Handyman Section</h1>
             <div className='my-3 sm:my-5 md:my-7 pl-2 sm:pl-5 md:pl-8'>
                 <ul>
                     

@@ -11,7 +11,7 @@ const Page:React.FC<PageProps> = () => {
     
 
   return  (
-    <main className=' flex flex-col m-10 '>
+    <main className=' flex flex-col  '>
          
     <section className='p-5 bg-white'>
     <OrderCardSection/>
