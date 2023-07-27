@@ -9,9 +9,11 @@ import Item from './Item';
 
 import {AiOutlineMenu} from "react-icons/ai"
 import Image from 'next/image';
-import ActiveLink from '@/helper/enums/ActiveLink';
+import ActiveLink from '@/helper/enums/HandymanLink';
 import LogoutItem from './LogoutItem';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import HandymanLink from '@/helper/enums/HandymanLink';
+import { usePathname } from 'next/navigation';
 
 
 type HandymanLeftBarProps = {
@@ -23,9 +25,8 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
   
   const [isAction ,setIsActive] = useState("homepage");
   const [isExpand,setIsExpand] = useState(false);
-  const fullUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const currentPage = fullUrl.split("/handyman/").pop()
-  console.log('Current page:', currentPage );
+  const Pathname = usePathname();
+  
   return (
     <div className={` sm:basis-1/4 bg-white box-shadow-bottom mr-1`}>
     {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
@@ -54,46 +55,46 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
             <div className='my-3 sm:my-5 md:my-7  sm:pl-5 md:pl-8'>
                 <ul>
                   
-                  <Item link={'/handyman/profile/edit'}
+                  <Item link={HandymanLink.EditProfile}
                    title="Edit Profile"
                    icon={"write-compose-pencil-edit-message-icon-1.png"}
-                   active={currentPage == ActiveLink.editProfile}
+                   active={HandymanLink.EditProfile == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
-                  <Item link={'/handyman/payment/packages'}
+                  <Item link={HandymanLink.PaymentPackages}
                    title="Payment Packages"
                    icon={"cash-money-payment-wallet-icon-1.png"}
-                   active={currentPage == ActiveLink.paymentPakages}
+                   active={HandymanLink.PaymentPackages == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
-                 <Item  link={"/handyman/offers/byemail"}
+                 <Item  link={HandymanLink.OffersByEmail}
                   title={"Receive offer by email"}
                   icon={"email-icon-2.png"}
-                  active={currentPage == ActiveLink.byemail}
+                  active={HandymanLink.OffersByEmail == Pathname}
                   textClassName={isExpand ? "block" :"hidden"}
                   /> 
-                  <Item link={"/handyman/email/change"}
+                  <Item link={HandymanLink.ChangeEmail}
                    title={"Change Email"}
                    icon={"email-icon-1.png"} 
-                   active={currentPage == ActiveLink.changeEmail}
+                   active={HandymanLink.ChangeEmail == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                      /> 
-                  <Item link={"/handyman/password/change"}
+                  <Item link={HandymanLink.PasswordChange}
                    title={"Change Password"} 
                   icon={"security-unlock-password-protection-safety-icon-1.png"}
-                  active={currentPage == ActiveLink.changePassword}
+                  active={HandymanLink.PasswordChange == Pathname}
                   textClassName={isExpand ? "block" :"hidden"}
                   />  
-                 <Item link={"/handyman/messages"}
+                 <Item link={HandymanLink.Messages}
                     title="Messages"  
                     icon={"envelope-mail-mobile-ui-message-email-icon-1.png"}
-                    active={currentPage == ActiveLink.messages}
+                    active={HandymanLink.Messages == Pathname}
                     textClassName={isExpand ? "block" :"hidden"}
                     />  
-                 <Item link={"/handyman/orders"} 
+                 <Item link={HandymanLink.Orders} 
                    title="Orders" 
                    icon={"order-confirmation-application-check-smartphone-icon-1.png"}  
-                   active={currentPage == ActiveLink.orders}
+                   active={HandymanLink.Orders== Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
                   

@@ -20,7 +20,7 @@ const Profile:React.FC<ProfileProps> = ({title,subtitle,image,link,textClassName
         <Link href={link} className=''>
         <ProfileImage image={image}/>
          </Link>
-        <div className={`${textClassName}  sm:block `}>
+        <div className={`${textClassName} sm:block `}>
             <Link href={link} className='cursor-pointer '>
             <h1 className='font-bold  text-[10px] xs:text-lg sm:text-xl md:text-2xl '>
                 {title}

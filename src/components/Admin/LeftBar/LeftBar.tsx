@@ -1,8 +1,8 @@
- "use client"
-import React,{useState} from 'react'
+'use client'
+import React,{useEffect, useState} from 'react'
 
 import Link from 'next/link';
-
+import {useRouter,usePathname} from "next/navigation"
 import Profile from '../Avatar/Profile';
 import {CgProfile} from "react-icons/cg";
 import Item from './Item';
@@ -12,6 +12,8 @@ import Image from 'next/image';
 import LogoutItem from './LogoutItem';
 import Typography from '@/components/Utilities/Typography';
 import HeadingType from '@/helper/enums/HeadingType';
+import AdminLink from '@/helper/enums/AdminLink';
+import ActiveLink from '@/helper/enums/HandymanLink';
 
 
 type LeftBarProps = {
@@ -19,9 +21,13 @@ type LeftBarProps = {
 };
 
 const LeftBar:React.FC<LeftBarProps> = () => {
-    
+    const Pathname = usePathname();
   const [isAction ,setIsActive] = useState("homepage");
   const [isExpand,setIsExpand] = useState(false);
+  /* useEffect(()=>{
+
+  }) */
+  console.log(Pathname)
   return (
     <div className={` sm:basis-1/4  box-shadow-top transition-all  ease-in-out mr-1`}>
     
@@ -57,44 +63,51 @@ const LeftBar:React.FC<LeftBarProps> = () => {
             <div className='my-3 sm:my-5 md:my-7  sm:pl-5 md:pl-8'>
                 <ul>
                  
-                  <Item link={'/admin'} 
+                  <Item link={AdminLink.Home} 
                    title="Client Profile"
-                   active={"homepage" == isAction}
+                   active={AdminLink.Home == Pathname}
                    icon={"account-avatar-head-person-profile-icon-2.png"}
                    textClassName={isExpand ? "block" :"hidden"} 
                     />
                   <Item 
-                   link={'/admin/login/details'}
+                   link={AdminLink.LoginDetails}
                    title="Login Details" 
-                   active={"loginpage" == isAction}
+                   active={AdminLink.LoginDetails == Pathname}
                    icon={"account-door-enter-login-icon-1.png"}
                    textClassName={isExpand ? "block" :"hidden"}  
                      />
                   <Item
                    title={"Active Listing"}
                    icon={"accept-approved-check-checked-confirm-icon-2.png"}
-                   link={"/admin/listing/active"}
+                   link={AdminLink.ActiveListing}
+                   active={AdminLink.ActiveListing == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    /> 
                   <Item title={"Change Email"}
                    icon={"email-icon-1.png"}
-                   link={"/admin/email/changed"}
+                   link={AdminLink.EmailChanged}
+                   active={AdminLink.EmailChanged == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    /> 
                   <Item 
                   title={"Accepted Offers"} 
-                  link={"/admin/offer/accepted"} 
+                  link={AdminLink.OfferAccepted} 
+                  active={AdminLink.OfferAccepted == Pathname}
                   icon={"accept-approved-check-checked-confirm-icon-2.png"}
                   textClassName={isExpand ? "block" :"hidden"}
                   />  
-                  <Item link={"/admin/review"}
+                  <Item 
                    title="Review Section"
                    icon={"bookmark-favorite-rank-rating-star-icon-1.png"}
+                   link={AdminLink.AdminReview}
+                   active={AdminLink.AdminReview == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />  
-                  <Item link={"/admin/offer/unaccepted"}
+                  <Item 
                    title="Un Accepted Offers"
                    icon={"cancel-close-cross-delete-reject-icon-1.png"}
+                   link={AdminLink.OfferUnAccepted}
+                   active={AdminLink.OfferUnAccepted == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />  
                   
@@ -115,55 +128,75 @@ const LeftBar:React.FC<LeftBarProps> = () => {
                 <ul>
                     
                   
-                 <Item link={"/admin/handyman/profile"}
+                 <Item 
                     title="Handyman Profile" 
-                     icon={"account-avatar-head-person-profile-icon-2.png"}
+                    icon={"account-avatar-head-person-profile-icon-2.png"}
+                    link={AdminLink.HandymanProfile}
+                    active={AdminLink.HandymanProfile == Pathname}
                      textClassName={isExpand ? "block" :"hidden"}
                      />
-                 <Item link={"/admin/handyman/login/details"} 
+                 <Item 
                     title="Login Details"  
                     icon={"account-door-enter-login-icon-1.png"}
+                    link={AdminLink.HandymanDetails} 
+                    active={AdminLink.HandymanDetails == Pathname}
                     textClassName={isExpand ? "block" :"hidden"}
                     /> 
-                 <Item link={"/admin/handyman/listing/active"}
+                 <Item 
                     title="Active Listing"  
                     icon={"accept-approved-check-checked-confirm-icon-2.png"}
+                    link={AdminLink.HandymanActiveListing}
+                    active={AdminLink.HandymanActiveListing == Pathname}
                     textClassName={isExpand ? "block" :"hidden"}
                     />  
-                 <Item link={"/admin/handyman/offer/sent"} 
+                 <Item 
                    title="Sent Offers"  
                    icon={"sent-icon-1.png"}
+                   link={AdminLink.HandymanAcceptedOffer} 
+                   active={AdminLink.HandymanAcceptedOffer == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />  
-                 <Item link={"/admin/handyman/offer/accepted"} 
+                 <Item 
                   title="Accepted Offers"  
                   icon={"accept-approved-check-checked-confirm-icon-2.png"}
+                  link={AdminLink.HandymanAcceptedOffer} 
+                  active={AdminLink.HandymanAcceptedOffer == Pathname}
                   textClassName={isExpand ? "block" :"hidden"}
                   />  
                 
-                 <Item link={"/admin/handyman/offer/unaccepted"} 
+                 <Item 
                    title="Un Accepted Offers" 
-                    icon={"cancel-close-cross-delete-reject-icon-1.png"}
+                   icon={"cancel-close-cross-delete-reject-icon-1.png"}
+                   link={AdminLink.HandymanUnAcceptedOffer} 
+                   active={AdminLink.HandymanUnAcceptedOffer == Pathname}
                     textClassName={isExpand ? "block" :"hidden"}
                     />  
-                 <Item link={"/admin/handyman/rating"} 
+                 <Item 
                    title="Ratings"  
                    icon={"bookmark-favorite-rank-rating-star-icon-1.png"}
+                   link={AdminLink.HandymanRating} 
+                   active={AdminLink.HandymanRating == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />  
-                 <Item link={"/admin/handyman/account/verify"} 
+                 <Item 
                    title="Activation Setting"  
                    icon={"unnamed.svg"}
+                   link={AdminLink.HandymanAccountVerify} 
+                   active={AdminLink.HandymanAccountVerify== Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />  
-                 <Item link={"/admin/handyman/uploaded/documents"}
+                 <Item 
                     title="Uploaded Documents" 
-                     icon={"cloud-upload-icon-1.png"}
+                    icon={"cloud-upload-icon-1.png"}
+                    link={AdminLink.HandymanDocumentUploaded}
+                    active={AdminLink.HandymanDocumentUploaded == Pathname}
                      textClassName={isExpand ? "block" :"hidden"}
                      />  
-                 <Item link={"/admin/handyman/profile/new"} 
+                 <Item 
                    title="All New Profile" 
                    icon={"account-avatar-head-person-profile-icon-2.png"}
+                   link={AdminLink.HandymanNewProfile} 
+                   active={AdminLink.HandymanNewProfile == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />  
                   

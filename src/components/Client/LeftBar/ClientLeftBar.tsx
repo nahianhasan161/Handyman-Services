@@ -10,10 +10,11 @@ import Item from '@/components/Admin/LeftBar/Item';
 
 import {AiOutlineMenu} from "react-icons/ai"
 import Image from 'next/image';
-import ActiveLink from '@/helper/enums/ActiveLink';
+import ActiveLink from '@/helper/enums/HandymanLink';
 import LogoutItem from '@/components/Admin/LeftBar/LogoutItem';
 import { RxHamburgerMenu } from 'react-icons/rx';
-
+import { usePathname } from 'next/navigation';
+import ClientLink from '@/helper/enums/ClientLink';
 
 type ClientLeftBarProps = {
   
@@ -24,10 +25,7 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
   
   const [isAction ,setIsActive] = useState("homepage");
   const [isExpand,setIsExpand] = useState(false);
-  
-  const fullUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const currentPage = fullUrl.split("/client/").pop()
-  console.log('Current page:', currentPage );
+  const Pathname = usePathname();
   return (
     <div className={` sm:basis-1/4  box-shadow-top mr-1`}>
     {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
@@ -44,7 +42,8 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
              <Profile title='Paul Ben'
               subtitle='Wall Builder'
                image='/images/handymanAvatar.png'
-                link='/handyman/email/change'
+                link={ ClientLink. }
+                
                 textClassName={isExpand ? "block" :"hidden"}
                 />
              
@@ -56,47 +55,47 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
             
             <div className='my-3 sm:my-5 md:my-7  sm:pl-5 md:pl-8'>
                 <ul>
-                  <Item link={'/client/handyman/find'}
+                  <Item link={ClientLink.FindHandyman}
                    title="Find Handyman"
                    icon={"handyman_find.svg"}
-                   active={currentPage == ActiveLink.editProfile}
+                   active={ClientLink.FindHandyman == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
-                  <Item link={'/client/jobs/posted'}
+                  <Item link={'/c{ ClientLink' }
                    title="Posted Jobs"
                    icon={"job_post.png"}
-                   active={currentPage == ActiveLink.paymentPakages}
+                   active={ ClientLink.JobsPosted == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
                
-                  <Item link={"/client/email/change"}
+                  <Item link={ClientLink.EmailChange}
                    title={"Change Email"}
                    icon={"email-icon-1.png"} 
-                   active={currentPage == ActiveLink.changeEmail}
+                   active={ClientLink.EmailChange == Pathname}
                    textClassName={isExpand ? "block" :"hidden"}
                      /> 
-                  <Item link={"/client/password/change"}
+                  <Item link={ClientLink.ChnagePassword  }
                    title={"Change Password"} 
                   icon={"security-unlock-password-protection-safety-icon-1.png"}
-                  active={currentPage == ActiveLink.changePassword}
+                  active={ClientLink.ChnagePassword == Pathname}
                   textClassName={isExpand ? "block" :"hidden"}
                   />  
-                  <Item link={"/client/offers/accepted"}
+                  <Item link={ClientLink.OfferAccepted }
                    title={"Accepted Offers"} 
                   icon={"accept-approved-check-checked-confirm-icon-1.png"}
-                  active={currentPage == ActiveLink.changePassword}
+                  active={ClientLink.OfferAccepted == Pathname}
                   textClassName={isExpand ? "block" :"hidden"}
                   />  
-                 <Item link={"/client/jobs/deleted"} 
+                 <Item link={ClientLink.JobsDeleted}
                    title="Deleted Jobs" 
                    icon={"delete.svg"}  
-                   active={currentPage == ActiveLink.orders}
+                   active={ClientLink.JobsDeleted == Pathname }
                    textClassName={isExpand ? "block" :"hidden"}
                    />
-                 <Item link={"/client/messages"}
+                 <Item link={ ClientLink.Messages}
                     title="Messages"  
                     icon={"envelope-mail-mobile-ui-message-email-icon-1.png"}
-                    active={currentPage == ActiveLink.messages}
+                    active={ClientLink.Messages == Pathname }
                     textClassName={isExpand ? "block" :"hidden"}
                     />  
                   
