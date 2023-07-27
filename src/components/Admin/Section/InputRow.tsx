@@ -14,7 +14,7 @@ type InputRowProps = {
 
 const InputRow:React.FC<InputRowProps> = ({ title1,name1,type1,placeholder1,title2,name2,type2,placeholder2}) => {
     
-    return (<div className='grid grid-cols-1 md:grid-cols-12 gap-2 items-center pb-5 lg:pl-5 lg:pr-10  min-w-[10rem]'>
+    return (<div className='grid grid-cols-1 md:grid-cols-12 gap-2 items-center  pb-5 lg:pl-5 lg:pr-10  min-w-[10rem]'>
     <div className='col-span-6'>
     <InputForm title={title1} name={name1} type={type1} placeholder={placeholder1}  />
 

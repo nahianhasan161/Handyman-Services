@@ -8,7 +8,7 @@ type EmailFormProps = {
 
 const EmailForm:React.FC<EmailFormProps> = () => {
     
-    return (<div className='bg-white sm:p-5 p-3 box-shadow-bottom'>
+    return (<div className='bg-white sm:p-5 p-3 box-shadow-bottom sm:m-5 m-1'>
         <InputRow
             title1='New Email'
             name1='new_email'

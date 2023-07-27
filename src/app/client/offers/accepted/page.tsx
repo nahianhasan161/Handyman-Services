@@ -25,7 +25,7 @@ return  (
        <Typography 
        Type={HeadingType.h1}
        Description='Accepted Offers'
-
+       className='py-3'
        />
       </div>
       {/* Content Part */}

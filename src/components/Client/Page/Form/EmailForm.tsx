@@ -8,7 +8,7 @@ type EmailFormProps = {
 
 const EmailForm:React.FC<EmailFormProps> = () => {
     
-    return (<section className='sm:p-5 p-3 bg-white box-shadow-bottom'>
+    return (<section className='sm:p-5 p-3 bg-white box-shadow-bottom '>
        
            
     <InputRow

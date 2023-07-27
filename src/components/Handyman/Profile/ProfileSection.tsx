@@ -23,7 +23,7 @@ const ProfileSection:React.FC<ProfileSectionProps> = ({imageClassName}) => {
        
         </div>
                  
-        <div className='bg-white pt-3 pb-3'>
+        <div className='bg-white pb-3 sm:m-5 m-1'>
             <div className='mb-3'>
             <div className='grid grid-cols-1  sm:grid-cols-12  items-center   '>
                 <InputBordered type='text' name='company_name' 

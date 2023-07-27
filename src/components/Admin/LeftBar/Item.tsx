@@ -11,7 +11,7 @@ type ItemProps = {
     
 };
 
-const Item:React.FC<ItemProps> = ({title,icon,active=false,link,textClassName}) => {
+const Item:React.FC<ItemProps> = ({title,icon,active=false,link,textClassName="hidden"}) => {
     
 
   return (
@@ -23,7 +23,7 @@ const Item:React.FC<ItemProps> = ({title,icon,active=false,link,textClassName}) 
                        <p>
                         <Image src={"/icons/"+icon} alt='profile_icon' height={17} width={17} className='min-w-[15px]'/>
                         
-                        </p>  <label className={`${textClassName} sm:block font-bold  sm:text-sm text-[#0E172C]  cursor-pointer text-[10px]`}>{title}</label> 
+                        </p>  <label className={`${textClassName}   sm:block font-bold  sm:text-sm text-[#0E172C]  cursor-pointer text-[10px]`}>{title}</label> 
                     </li>
        </Link>  
     </>

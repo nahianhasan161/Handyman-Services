@@ -45,7 +45,7 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
               subtitle='Wall Builder'
                image='/images/handymanAvatar.png'
                 link='/handyman/email/change'
-                textClassName={isExpand ? "hidden" :" "}
+                textClassName={isExpand ? "block" :"hidden"}
                 />
              
           
@@ -60,44 +60,44 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
                    title="Find Handyman"
                    icon={"handyman_find.svg"}
                    active={currentPage == ActiveLink.editProfile}
-                   textClassName={isExpand ? "hidden" :" "}
+                   textClassName={isExpand ? "block" :"hidden"}
                    />
                   <Item link={'/client/jobs/posted'}
                    title="Posted Jobs"
                    icon={"job_post.png"}
                    active={currentPage == ActiveLink.paymentPakages}
-                   textClassName={isExpand ? "hidden" :" "}
+                   textClassName={isExpand ? "block" :"hidden"}
                    />
                
                   <Item link={"/client/email/change"}
                    title={"Change Email"}
                    icon={"email-icon-1.png"} 
                    active={currentPage == ActiveLink.changeEmail}
-                   textClassName={isExpand ? "hidden" :" "}
+                   textClassName={isExpand ? "block" :"hidden"}
                      /> 
                   <Item link={"/client/password/change"}
                    title={"Change Password"} 
                   icon={"security-unlock-password-protection-safety-icon-1.png"}
                   active={currentPage == ActiveLink.changePassword}
-                  textClassName={isExpand ? "hidden" :" "}
+                  textClassName={isExpand ? "block" :"hidden"}
                   />  
                   <Item link={"/client/offers/accepted"}
                    title={"Accepted Offers"} 
                   icon={"accept-approved-check-checked-confirm-icon-1.png"}
                   active={currentPage == ActiveLink.changePassword}
-                  textClassName={isExpand ? "hidden" :" "}
+                  textClassName={isExpand ? "block" :"hidden"}
                   />  
                  <Item link={"/client/jobs/deleted"} 
                    title="Deleted Jobs" 
                    icon={"delete.svg"}  
                    active={currentPage == ActiveLink.orders}
-                   textClassName={isExpand ? "hidden" :" "}
+                   textClassName={isExpand ? "block" :"hidden"}
                    />
                  <Item link={"/client/messages"}
                     title="Messages"  
                     icon={"envelope-mail-mobile-ui-message-email-icon-1.png"}
                     active={currentPage == ActiveLink.messages}
-                    textClassName={isExpand ? "hidden" :" "}
+                    textClassName={isExpand ? "block" :"hidden"}
                     />  
                   
                 </ul>
@@ -110,7 +110,7 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
     
 
     <LogoutItem 
-     textClassName={isExpand ? "hidden" :" "}
+     textClassName={isExpand ? "block" :"hidden"}
     />
     </div>
                   

@@ -13,6 +13,7 @@ import Image from 'next/image';
 import ActionButton from '../Button/ActionButton';
 import DeleteBtn from './DeleteBtn';
 import NavTitle from './NavTitle';
+import HeadingType from '@/helper/enums/HeadingType';
 type NavBarProps = {
   isMessage?:boolean,
   isDeleteBtn?:boolean,
@@ -32,6 +33,7 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
 
     return (
         <div>
+          
             <nav className='sm:p-5 box-shadow-top mb-1'>
                 <ul className='flex justify-between gap-5 items-center font-bold text-md sm:text-lg'>
                    {/* <Link href={"/"}> */} <li className='flex items-center gap-1 cursor-pointer p-3  '

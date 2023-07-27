@@ -42,7 +42,7 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
              subtitle='Wall Builder'
              image='/images/handymanAvatar.png'
              link='/handyman/email/change'
-             textClassName={isExpand ? "hidden" :" "}
+             textClassName={isExpand ? "block" :"hidden"}
                 />
               {/* close btn */}
           
@@ -58,43 +58,43 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
                    title="Edit Profile"
                    icon={"write-compose-pencil-edit-message-icon-1.png"}
                    active={currentPage == ActiveLink.editProfile}
-                   textClassName={isExpand ? "hidden" :" "}
+                   textClassName={isExpand ? "block" :"hidden"}
                    />
                   <Item link={'/handyman/payment/packages'}
                    title="Payment Packages"
                    icon={"cash-money-payment-wallet-icon-1.png"}
                    active={currentPage == ActiveLink.paymentPakages}
-                   textClassName={isExpand ? "hidden" :" "}
+                   textClassName={isExpand ? "block" :"hidden"}
                    />
                  <Item  link={"/handyman/offers/byemail"}
                   title={"Receive offer by email"}
                   icon={"email-icon-2.png"}
                   active={currentPage == ActiveLink.byemail}
-                  textClassName={isExpand ? "hidden" :" "}
+                  textClassName={isExpand ? "block" :"hidden"}
                   /> 
                   <Item link={"/handyman/email/change"}
                    title={"Change Email"}
                    icon={"email-icon-1.png"} 
                    active={currentPage == ActiveLink.changeEmail}
-                   textClassName={isExpand ? "hidden" :" "}
+                   textClassName={isExpand ? "block" :"hidden"}
                      /> 
                   <Item link={"/handyman/password/change"}
                    title={"Change Password"} 
                   icon={"security-unlock-password-protection-safety-icon-1.png"}
                   active={currentPage == ActiveLink.changePassword}
-                  textClassName={isExpand ? "hidden" :" "}
+                  textClassName={isExpand ? "block" :"hidden"}
                   />  
                  <Item link={"/handyman/messages"}
                     title="Messages"  
                     icon={"envelope-mail-mobile-ui-message-email-icon-1.png"}
                     active={currentPage == ActiveLink.messages}
-                    textClassName={isExpand ? "hidden" :" "}
+                    textClassName={isExpand ? "block" :"hidden"}
                     />  
                  <Item link={"/handyman/orders"} 
                    title="Orders" 
                    icon={"order-confirmation-application-check-smartphone-icon-1.png"}  
                    active={currentPage == ActiveLink.orders}
-                   textClassName={isExpand ? "hidden" :" "}
+                   textClassName={isExpand ? "block" :"hidden"}
                    />
                   
                 </ul>
@@ -107,7 +107,7 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
     
 
     <LogoutItem
-    textClassName={isExpand ? "hidden" :" "}
+    textClassName={isExpand ? "block" :"hidden"}
     />
     </div>
                   

@@ -7,7 +7,7 @@ type PasswordFormProps = {
 
 const PasswordForm:React.FC<PasswordFormProps> = () => {
     
-    return (<section className='p-5 bg-white mt-10  py-2 sm:py-5 lg:py-10 box-shadow-bottom '>
+    return (<section className='p-5 bg-white mt-10  py-2 sm:py-5 lg:py-10 box-shadow-bottom sm:m-5 m-1'>
     <div >
     
     <InputRow 

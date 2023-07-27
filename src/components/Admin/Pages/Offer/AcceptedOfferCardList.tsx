@@ -14,7 +14,10 @@ const AcceptedOfferCardList:React.FC<AcceptedOfferCardListProps> = () => {
     const Logs = ['Posted on','26/5/2023','6:00PM']
     return <div>
          <div className='py-3'>
-         <Typography Type={HeadingType.h1} Description='Accepted Offers' className='font-bold'/>
+         <Typography Type={HeadingType.h1}
+          Description='Accepted Offers'
+           className='font-bold '
+           />
         </div>
         {/* Content Part */}
            <OffersSection 
