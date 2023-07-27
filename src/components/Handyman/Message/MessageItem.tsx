@@ -15,7 +15,7 @@ const MessageItem:React.FC<MessageItemProps> = ({name,time,description}) => {
             <h1 className='font-bold'>{name}</h1>
            
             <span className='text-xs text-offwhite_400'> 
-            <StatusSpan title={time}/>
+            <StatusSpan title={time} className='ml-1'/>
             </span>
         </div>
         <p className='text-xs text-offwhite_50 ml-1'> {description}</p>

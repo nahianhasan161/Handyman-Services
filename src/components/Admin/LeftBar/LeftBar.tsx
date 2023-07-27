@@ -31,7 +31,7 @@ const LeftBar:React.FC<LeftBarProps> = () => {
           
               {/* Hamburger Menu */}
             <span className='sm:hidden block'  onClick={()=>setIsExpand(!isExpand)}>
-            <RxHamburgerMenu class="mt-2 ml-2" />
+            <RxHamburgerMenu className="mt-2 ml-2" />
             </span>
             <div className='flex justify-between align-items-center'>
 

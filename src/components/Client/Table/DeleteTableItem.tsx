@@ -16,14 +16,14 @@ const DeleteTableItem:React.FC<DeleteTableItemProps> = ({title,date,time}) => {
               </div>
               <div className='col-start-6 justify-center sm:justify-start col-span-4 items-center flex flex-col  gap-8 pr-10 whitespace-nowrap '>
                 <p >Posted on</p>
-                <p className='text-offwhite-100 '><StatusSpan title={date} /></p>
-                <p className='text-offwhite-100'><StatusSpan title={time} /></p>
+                <p className='text-offwhite-100 '><StatusSpan className='ml-1' title={date} /></p>
+                <p className='text-offwhite-100'><StatusSpan className='ml-1' title={time} /></p>
               </div>
               <p className="font-bold col-span-1 col-start-11 sm:col-start-12
                 "
                >
                 {/* TODO:Fix the margin not setting to 0 */}
-                <StatusSpan title="Deleted" className="ml-0" />
+                <StatusSpan title="Deleted"  />
                 
                 </p>
         </div>

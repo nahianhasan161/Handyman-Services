@@ -34,7 +34,7 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
      
                 {/* menu */}
                 <span  className='sm:hidden block' onClick={()=>setIsExpand(!isExpand)}>
-            <RxHamburgerMenu class="my-2 ml-1" />
+            <RxHamburgerMenu className="my-2 ml-1" />
             </span>
                 <div className=' sm:py-3 md:py-5 '>
               

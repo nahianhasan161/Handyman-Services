@@ -14,7 +14,7 @@ const OrderItem:React.FC<OrderItemProps> = ({title,time,date,description,amount}
         
         <div className='my-1  space-y-2 '>
             <h1 className='font-medium'>{title}</h1>
-            {/* TODO: sudo circle before time */}
+           
             
        
         <p className='text-xs text-offwhite_50'> {description}</p>

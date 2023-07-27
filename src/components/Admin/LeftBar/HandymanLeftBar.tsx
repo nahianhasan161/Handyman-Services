@@ -33,7 +33,7 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
          <div className=' pl-1 sm:pl-5 sm:py-5 '>
                {/* Hamburger Menu */}
                <span  className='sm:hidden blocks' onClick={()=>setIsExpand(!isExpand)}>
-            <RxHamburgerMenu class="my-2 ml-1 " />
+            <RxHamburgerMenu className="my-2 ml-1 " />
             </span>
             <div className='flex justify-between align-items-center'>
 
