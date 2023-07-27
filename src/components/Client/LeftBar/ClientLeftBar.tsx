@@ -29,7 +29,7 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
   const currentPage = fullUrl.split("/client/").pop()
   console.log('Current page:', currentPage );
   return (
-    <div className={` sm:basis-1/4  box-shadow-top`}>
+    <div className={` sm:basis-1/4  box-shadow-top mr-1`}>
     {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
      
                 {/* menu */}
