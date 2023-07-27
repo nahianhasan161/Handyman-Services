@@ -35,7 +35,7 @@ export default function RootLayout({
     
                 <LeftBar />
            
-            <div className="w-full sm:basis-3/4 bg-[#F2F8FF] min-w-[0]" >
+            <div className="w-full sm:basis-3/4 bg-[#F2F8FF] min-w-[0] " >
               <div className=" pt-2 sm:pt-5 md:pt-10 pl-2 sm:p-5 md:p-10 ">
 
            {children}

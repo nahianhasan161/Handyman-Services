@@ -27,7 +27,7 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
   const currentPage = fullUrl.split("/handyman/").pop()
   console.log('Current page:', currentPage );
   return (
-    <div className={` sm:basis-1/4 bg-[#F2F8FF box-shadow-top`}>
+    <div className={` sm:basis-1/4 bg-white box-shadow-bottom mr-1`}>
     {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
      
          <div className=' pl-1 sm:pl-5 sm:py-5 '>

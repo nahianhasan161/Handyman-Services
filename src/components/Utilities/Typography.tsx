@@ -16,6 +16,7 @@ const Typography:React.FC<TypographyProps> = ({Type,Description,className}) => {
     return(
         <>
         {(Type == HeadingType.h1)&& (<h1 className={`${ className } font-bold text-md sm:text-lg md:text-xl lg:text-2xl`} > {Description}</h1>)}
+        
         </>
     );
 }

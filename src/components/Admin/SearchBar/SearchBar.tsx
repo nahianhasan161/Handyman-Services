@@ -10,7 +10,7 @@ const SearchBar:React.FC<SearchBarProps> = () => {
     return (<div>
        
 
-        <form className='flex  items-center md:gap-3 bg-white m-1 md:p-1 md:m-3 rounded-[16px]  shadow-bottom'>
+        <form className='flex  items-center md:gap-3 bg-white m-1 md:p-1 md:m-3 rounded-[16px]  box-shadow-bottom'>
             <div  className='flex items-center  xs:gap-3 border-r-2  md:p-2 w-full'>
                 <label htmlFor='search '>
                     <Image src={"/icons/search.png"} alt='search_icon' height={16} width={16}></Image>

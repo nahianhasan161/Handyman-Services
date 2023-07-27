@@ -9,7 +9,7 @@ type TableProps = {
 const Table:React.FC<TableProps> = ({titles,informations}) => {
     
     
-    return (<div className='overflow-x-auto  shadow '>
+    return (<div className='overflow-x-auto  box-shadow-bottom'>
         <table className="table-auto border-2 w-full text-[#0E172C]">
   <thead className='border-2 bg-[#F0EAEA] '>
     <tr className='font-bold text-base'>

@@ -21,7 +21,7 @@ const LeftBar:React.FC<LeftBarProps> = () => {
   const [isAction ,setIsActive] = useState("homepage");
   const [isExpand,setIsExpand] = useState(false);
   return (
-    <div className={` sm:basis-1/4 bg-[#F2F8FF box-shadow-top transition-all  ease-in-out`}>
+    <div className={` sm:basis-1/4  box-shadow-top transition-all  ease-in-out mr-1`}>
     
       
      

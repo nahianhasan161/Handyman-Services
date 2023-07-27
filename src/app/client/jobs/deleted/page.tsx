@@ -15,7 +15,7 @@ const Page:React.FC<PageProps> = () => {
   return  (
     <main className=' h-screen flex flex-col  '>
          
-    <section className='p-2 sm:p-5 bg-white'>
+    <section className=''>
   
      <div className='min-w-[10rem]'>
      

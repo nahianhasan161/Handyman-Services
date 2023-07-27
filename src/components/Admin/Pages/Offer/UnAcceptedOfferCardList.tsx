@@ -8,7 +8,7 @@ type UnAcceptedOfferCardListProps = {
 };
 
 const UnAcceptedOfferCardList:React.FC<UnAcceptedOfferCardListProps> = () => {
-     const Details = [["Job Title",'Laying tiles: 25m2; Floor in bathroom, kitchen, hall 25km, Berlin'], ["Login Date",'26/5/2023'],["Login Time",'6:00PM']];
+     const Details = [["Job Title",'Laying tiles: 25m2; Floor in bathroom, kitchen, hall 25km, Berlin'], ["Login Date",'26/5/2023'],["Price",'$250']];
     
     
     const Logs = ['Posted on','26/5/2023','6:00PM']
@@ -19,6 +19,7 @@ const UnAcceptedOfferCardList:React.FC<UnAcceptedOfferCardListProps> = () => {
          Type={HeadingType.h1}
          Description='Un Accepted Offers'
          className='font-bold'
+         
          />
         </div>
         {/* Content Part */}
@@ -26,8 +27,10 @@ const UnAcceptedOfferCardList:React.FC<UnAcceptedOfferCardListProps> = () => {
             <OffersSection 
             Details={Details}
             Logs={Logs}
-            Status='Un Accepted' 
+            Status='Un Accepted'
+            DisableBtn={true} 
             />
+    
         </div>
     );
 }

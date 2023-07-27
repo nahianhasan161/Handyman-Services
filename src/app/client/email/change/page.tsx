@@ -4,6 +4,7 @@ import ActionButton from '@/components/Admin/Button/ActionButton';
 import Image from 'next/image';
 import MessageItem from '@/components/Handyman/Message/MessageItem';
 import InputRow from '@/components/Admin/Section/InputRow';
+import EmailForm from '@/components/Client/Page/Form/EmailForm';
 type PageProps = {
     
     
@@ -19,23 +20,7 @@ const Page:React.FC<PageProps> = () => {
          
          
             
-         <section className='sm:p-5 p-3 bg-white'>
-       
-           
-            <InputRow
-            title1='New Email'
-            name1='new_email'
-            type1='email'
-            placeholder1='abc@gmail.com'
-            title2='Confirm Email'
-            name2='confirm_email'
-            type2='email'
-            placeholder2='xyz@gmail.com'
-            />
-            <ActionButton title='Save Changes' className='float-right'/>
-       
-        
-        </section>
+         <EmailForm/>
         </main>
     
   );

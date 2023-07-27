@@ -9,7 +9,7 @@ const MessageSection:React.FC<MessageSectionProps> = () => {
     
     return (  <main className='  flex flex-col'>
          
-    <section className='p-5 bg-white'>
+    <section className=''>
   
      <MessageList/>
    </section>

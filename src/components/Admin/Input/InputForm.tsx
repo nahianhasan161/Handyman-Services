@@ -12,7 +12,7 @@ type InputFormProps = {
 const InputForm:React.FC<InputFormProps> = ({title,type,placeholder,className,name}) => {
     
     
-    return (<div className='bg-white p-3'>
+    return (<div className='bg-white p-3 '>
 
         <div>
             {title && (<label htmlFor={name} className='Whitespace-nowrap block py-3 fond-xs sm:font-sm md:font-medium'>{title}</label>)}

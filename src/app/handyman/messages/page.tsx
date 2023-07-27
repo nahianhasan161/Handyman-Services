@@ -15,7 +15,7 @@ const Page:React.FC<PageProps> = () => {
   return  (
     <main className=' flex flex-col '>
          
-         <section className='p-2 sm:p-5 bg-white'>
+         <section className=''>
          <MessageSection/>
         </section>
         </main>

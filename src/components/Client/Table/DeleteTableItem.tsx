@@ -10,7 +10,7 @@ type DeleteTableItemProps = {
 const DeleteTableItem:React.FC<DeleteTableItemProps> = ({title,date,time}) => {
     
     return (
-        <div className='grid grid-cols-12  text-xs my-3'>
+        <div className='grid grid-cols-12  text-xs my-3 box-shadow-bottom md:p-5 sm:p-3 p-1 bg-white sm:m-5'>
         <div className='col-span-3 md:col-span-4 gap-5 '>
               <h1 className='flex gap-3 font-medium max-w-[14rem]'>{title}</h1>
               </div>
@@ -22,7 +22,7 @@ const DeleteTableItem:React.FC<DeleteTableItemProps> = ({title,date,time}) => {
               <p className="font-bold col-span-1 col-start-11 sm:col-start-12
                 "
                >
-                
+                {/* TODO:Fix the margin not setting to 0 */}
                 <StatusSpan title="Deleted" className="ml-0" />
                 
                 </p>

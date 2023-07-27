@@ -8,15 +8,16 @@ type ReviewCartProps = {
     Status?:string,
     
     Logs:Array<string>,
+    DisableBtn?:boolean,
     
 };
 
-const ReviewCart:React.FC<ReviewCartProps> = ({Details,Status,Logs}) => {
+const ReviewCart:React.FC<ReviewCartProps> = ({Details,Status,Logs,DisableBtn=false}) => {
     
     
     return (
 
-        <div className='text-offwhite-400 p-5 relative bg-white max-w-[28rem] '>
+        <div className='text-offwhite-400 p-5 relative bg-white max-w-[28rem] box-shadow-bottom'>
                 {Status && (<span className='text-xs absolute top-5 right-5 text-offwhite-50'>{Status}</span>)}
             <div>
                {Details && Details.map((Detail,index)=>
@@ -28,9 +29,9 @@ const ReviewCart:React.FC<ReviewCartProps> = ({Details,Status,Logs}) => {
                )}
                <p className='flex gap-[0.5rem] sm:gap-5 lg:gap-9 items-center text-xs whitespace-nowrap '>{Logs.map((Log,key)=> <span key={key} className={`${key == 0 ? 'font-bold': ''}`}>{Log}</span> )}</p>
             </div>
-            <div className='text-center  pt-2'>
+           {!DisableBtn && (<div className='text-center  pt-2'>
                 <Button title='Edit Review' />
-            </div>
+            </div>)}
         </div>
         
     );

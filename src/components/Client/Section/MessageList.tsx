@@ -8,7 +8,7 @@ type MessageListProps = {
 
 const MessageList:React.FC<MessageListProps> = () => {
     
-    return (<div className=' grid grid-cols-12 min-w-[10rem]'>
+    return (<div className=' grid grid-cols-12 min-w-[10rem] box-shadow-bottom p-2 sm:p-5 sm:m-5 bg-white'>
        
     <div className=' col-span-10 '>
       <MessageItem name='Jhon Smit'

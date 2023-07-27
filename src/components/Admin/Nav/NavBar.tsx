@@ -32,7 +32,7 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
 
     return (
         <div>
-            <nav className='sm:p-5 border-2 box-shadown-bottom'>
+            <nav className='sm:p-5 box-shadow-top mb-1'>
                 <ul className='flex justify-between gap-5 items-center font-bold text-md sm:text-lg'>
                    {/* <Link href={"/"}> */} <li className='flex items-center gap-1 cursor-pointer p-3  '
                    onClick={handleBack}

@@ -8,7 +8,7 @@ type OrderCardSectionProps = {
 const OrderCardSection:React.FC<OrderCardSectionProps> = () => {
     
     return (
-        <div className=' grid grid-cols-12 '>
+        <div className=' grid grid-cols-12 bg-white box-shadow-bottom p-2 sm:p-5 sm:m-5 '>
        
        <div className=' col-span-10 '>
          <OrderItem 

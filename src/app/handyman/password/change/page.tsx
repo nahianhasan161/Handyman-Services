@@ -4,6 +4,7 @@ import ActionButton from '@/components/Admin/Button/ActionButton';
 import InputRow from '@/components/Admin/Section/InputRow';
 import Typography from '@/components/Utilities/Typography';
 import HeadingType from '@/helper/enums/HeadingType';
+import PasswordForm from '@/components/Handyman/pages/form/PasswordForm';
 type PageProps = {
     
     
@@ -22,19 +23,7 @@ const Page:React.FC<PageProps> = () => {
          className='font-bold'
          />
         </div>
-        <div className='bg-white sm:p-5 p-3 mt-5'>
-        <InputRow 
-            name1='old_password'
-            title1='Old Password'
-            type1='password'
-            placeholder1='********'
-            name2='new_password'
-            title2='New Password'
-            type2='password'
-            placeholder2='********'
-            />
-            <ActionButton title='Save Changes' className='float-right'/>
-        </div>
+        <PasswordForm/>
         </div>
     
   );

@@ -12,7 +12,7 @@ const OrderItem:React.FC<OrderItemProps> = ({title,time,date,description,amount}
     
      return (
         
-        <div className='my-1  space-y-2'>
+        <div className='my-1  space-y-2 '>
             <h1 className='font-medium'>{title}</h1>
             {/* TODO: sudo circle before time */}
             
