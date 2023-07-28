@@ -25,7 +25,7 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
   
   const [isAction ,setIsActive] = useState("homepage");
   const [isExpand,setIsExpand] = useState(false);
-  const Pathname = usePathname();
+  const currentUrl = usePathname();
   return (
     <div className={` sm:basis-1/4  box-shadow-top mr-1`}>
     {/* <div className={`w-full  ${show? "sm:basis-1/4 " : " bg-[#F2F8FF]"} box-shadow-top`}> */}
@@ -42,7 +42,7 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
              <Profile title='Paul Ben'
               subtitle='Wall Builder'
                image='/images/handymanAvatar.png'
-                link={ ClientLink. }
+                link={ ClientLink.FindHandyman }
                 
                 textClassName={isExpand ? "block" :"hidden"}
                 />
@@ -58,44 +58,44 @@ const ClientLeftBar:React.FC<ClientLeftBarProps> = () => {
                   <Item link={ClientLink.FindHandyman}
                    title="Find Handyman"
                    icon={"handyman_find.svg"}
-                   active={ClientLink.FindHandyman == Pathname}
+                   active={ClientLink.FindHandyman == currentUrl}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
                   <Item link={'/c{ ClientLink' }
                    title="Posted Jobs"
                    icon={"job_post.png"}
-                   active={ ClientLink.JobsPosted == Pathname}
+                   active={ ClientLink.JobsPosted == currentUrl}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
                
                   <Item link={ClientLink.EmailChange}
                    title={"Change Email"}
                    icon={"email-icon-1.png"} 
-                   active={ClientLink.EmailChange == Pathname}
+                   active={ClientLink.EmailChange == currentUrl}
                    textClassName={isExpand ? "block" :"hidden"}
                      /> 
                   <Item link={ClientLink.ChnagePassword  }
                    title={"Change Password"} 
                   icon={"security-unlock-password-protection-safety-icon-1.png"}
-                  active={ClientLink.ChnagePassword == Pathname}
+                  active={ClientLink.ChnagePassword == currentUrl}
                   textClassName={isExpand ? "block" :"hidden"}
                   />  
                   <Item link={ClientLink.OfferAccepted }
                    title={"Accepted Offers"} 
                   icon={"accept-approved-check-checked-confirm-icon-1.png"}
-                  active={ClientLink.OfferAccepted == Pathname}
+                  active={ClientLink.OfferAccepted == currentUrl}
                   textClassName={isExpand ? "block" :"hidden"}
                   />  
                  <Item link={ClientLink.JobsDeleted}
                    title="Deleted Jobs" 
                    icon={"delete.svg"}  
-                   active={ClientLink.JobsDeleted == Pathname }
+                   active={ClientLink.JobsDeleted == currentUrl }
                    textClassName={isExpand ? "block" :"hidden"}
                    />
                  <Item link={ ClientLink.Messages}
                     title="Messages"  
                     icon={"envelope-mail-mobile-ui-message-email-icon-1.png"}
-                    active={ClientLink.Messages == Pathname }
+                    active={ClientLink.Messages == currentUrl }
                     textClassName={isExpand ? "block" :"hidden"}
                     />  
                   

@@ -25,7 +25,7 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
   
   const [isAction ,setIsActive] = useState("homepage");
   const [isExpand,setIsExpand] = useState(false);
-  const Pathname = usePathname();
+  const currentUrl = usePathname();
   
   return (
     <div className={` sm:basis-1/4 bg-white box-shadow-bottom mr-1`}>
@@ -58,43 +58,43 @@ const HandymanLeftBar:React.FC<HandymanLeftBarProps> = () => {
                   <Item link={HandymanLink.EditProfile}
                    title="Edit Profile"
                    icon={"write-compose-pencil-edit-message-icon-1.png"}
-                   active={HandymanLink.EditProfile == Pathname}
+                   active={HandymanLink.EditProfile == currentUrl}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
                   <Item link={HandymanLink.PaymentPackages}
                    title="Payment Packages"
                    icon={"cash-money-payment-wallet-icon-1.png"}
-                   active={HandymanLink.PaymentPackages == Pathname}
+                   active={HandymanLink.PaymentPackages == currentUrl}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
                  <Item  link={HandymanLink.OffersByEmail}
                   title={"Receive offer by email"}
                   icon={"email-icon-2.png"}
-                  active={HandymanLink.OffersByEmail == Pathname}
+                  active={HandymanLink.OffersByEmail == currentUrl}
                   textClassName={isExpand ? "block" :"hidden"}
                   /> 
                   <Item link={HandymanLink.ChangeEmail}
                    title={"Change Email"}
                    icon={"email-icon-1.png"} 
-                   active={HandymanLink.ChangeEmail == Pathname}
+                   active={HandymanLink.ChangeEmail == currentUrl}
                    textClassName={isExpand ? "block" :"hidden"}
                      /> 
                   <Item link={HandymanLink.PasswordChange}
                    title={"Change Password"} 
                   icon={"security-unlock-password-protection-safety-icon-1.png"}
-                  active={HandymanLink.PasswordChange == Pathname}
+                  active={HandymanLink.PasswordChange == currentUrl}
                   textClassName={isExpand ? "block" :"hidden"}
                   />  
                  <Item link={HandymanLink.Messages}
                     title="Messages"  
                     icon={"envelope-mail-mobile-ui-message-email-icon-1.png"}
-                    active={HandymanLink.Messages == Pathname}
+                    active={HandymanLink.Messages == currentUrl}
                     textClassName={isExpand ? "block" :"hidden"}
                     />  
                  <Item link={HandymanLink.Orders} 
                    title="Orders" 
                    icon={"order-confirmation-application-check-smartphone-icon-1.png"}  
-                   active={HandymanLink.Orders== Pathname}
+                   active={HandymanLink.Orders== currentUrl}
                    textClassName={isExpand ? "block" :"hidden"}
                    />
                   
