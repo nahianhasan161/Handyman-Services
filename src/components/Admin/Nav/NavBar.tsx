@@ -17,10 +17,11 @@ import HeadingType from '@/helper/enums/HeadingType';
 type NavBarProps = {
   isMessage?:boolean,
   isDeleteBtn?:boolean,
+  title?:string,
   
 };
 
-const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
+const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false,title}) => {
     const [noftify,setNoftify] = useState(false);
     const [message,setMessage] = useState(false);
 
@@ -45,7 +46,7 @@ const NavBar:React.FC<NavBarProps> = ({isMessage=false,isDeleteBtn=false}) => {
                         </span> <label className='cursor-pointer sm:text-base text-xs sm:text-md'>Return</label> 
                     </li>
                     {/* </Link> */}
-                    <NavTitle title="Dashbord" link='"/admin"'/>
+                    <NavTitle title={title? title : "Dashbord"} link='"/admin"'/>
                     <li>
                         <div className=' flex gap-1 sm:gap-5'>
                      {/* message */}
