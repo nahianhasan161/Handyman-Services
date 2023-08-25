@@ -1,10 +1,31 @@
  const TableData = 
    {
-    LoginDetails: [
+   
+   LoginDetails: [
+    {
+        title:"IP address",
+        data:[
+            "103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0"
+        ]
+    },
+    {
+        title:"Login Date",
+        data:[
+            "26/05/2023","26/05/2023","26/05/2023","26/05/2023","26/05/2023","26/05/2023","26/05/2023","26/05/2023",
+        ]
+    },
+    {
+        title:"Login Time",
+        data:[
+            "6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM"
+        ]
+    },
+   ],
+   UserDetails: [
     {
         title:"Image",
         data:[
-            "103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0"
+            "/images/avatar1.png","/images/avatar1.png","/images/avatar1.png","/images/avatar1.png","/images/avatar1.png","/images/avatar1.png","/images/avatar1.png","/images/avatar1.png"
         ]
     },
     {
@@ -40,41 +61,60 @@
     {
         title:"Uploaded documents",
         data:[
-            "6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM"
+            true,false,true,true,true,true,true,true
         ]
     },
     {
         title:"Verified",
         data:[
-            "6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM"
+            true,false,true,true,true,true,true,true
         ]
     },
     {
         title:"Activate",
         data:[
-            "6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM"
+            true,false,true,true,true,true,true,true
         ]
     },
    ],
-   UserDetails: [
+   PaymentDetails: [
     {
-        title:"IP address",
+        title:"ID",
         data:[
-            "103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0","103.76.96.0"
+            "1","2","3","4","5","6","7","8"
         ]
     },
     {
-        title:"Login Date",
+        title:"Name",
         data:[
-            "26/05/2023","26/05/2023","26/05/2023","26/05/2023","26/05/2023","26/05/2023","26/05/2023","26/05/2023",
+            "Alex","Alex","Alex","Alex","Alex","Alex","Alex","Alex",
         ]
     },
     {
-        title:"Login Time",
+        title:"Payment Plan",
         data:[
-            "6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM","6:45PM"
+            "3 Month","3 Month","3 Month","3 Month","3 Month","3 Month","3 Month","3 Month"
         ]
     },
+    {
+        title:"Payment Thru",
+        data:[
+            "Paypal","Paypal","Paypal","Paypal","Paypal","Paypal","Paypal","Paypal"
+        ]
+    },
+    {
+        title:"Payment Amount",
+        data:[
+            "$20","$20","$20","$20","$20","$20","$20","$20"
+        ]
+    },
+    {
+        title:"Download all",
+        data:[
+            "/new_admin/messages","/new_admin/messages","/new_admin/messages","/new_admin/messages","/new_admin/messages","/new_admin/messages","/new_admin/messages","/new_admin/messages"
+        ]
+    },
+    
    ],
 }
 

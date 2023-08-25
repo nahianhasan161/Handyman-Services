@@ -2,18 +2,17 @@
 import React,{useEffect, useState} from 'react'
 
 import Link from 'next/link';
-import {useRouter,usePathname} from "next/navigation"
+import {usePathname} from "next/navigation"
 import Profile from '../Avatar/Profile';
-import {CgProfile} from "react-icons/cg";
+
 import Item from './Item';
-import {RxCross1, RxHamburgerMenu} from "react-icons/rx"
-import {AiOutlineMenu} from "react-icons/ai"
-import Image from 'next/image';
+import { RxHamburgerMenu} from "react-icons/rx"
+
 import LogoutItem from './LogoutItem';
 import Typography from '@/components/Utilities/Typography';
 import HeadingType from '@/helper/enums/HeadingType';
 import AdminLink from '@/helper/enums/AdminLink';
-import ActiveLink from '@/helper/enums/HandymanLink';
+
 
 
 type LeftBarProps = {
