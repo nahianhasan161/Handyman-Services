@@ -37,7 +37,7 @@ export default function PiChart (props: IPiChartProps) {
     <>
    
        <div className='w-40'>
-       <ResponsiveContainer width="100%" height="100%">
+       {/* <ResponsiveContainer width="100%" height="100%"> */}
       <PieChart width={330} height={250}>
         <Pie
           data={data}
@@ -54,7 +54,7 @@ export default function PiChart (props: IPiChartProps) {
         </Pie>
         <Tooltip />
       </PieChart>
-      </ResponsiveContainer>
+      {/* </ResponsiveContainer> */}
       </div>
     
     </>
