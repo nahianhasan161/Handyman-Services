@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge"
-import { clsx } from "clsx"
-export default function cn(...inputs : any){
+import { clsx,ClassValue } from "clsx"
+export default function cn(...inputs : ClassValue[]){
     return twMerge(clsx(inputs))
 }
