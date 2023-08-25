@@ -4,7 +4,7 @@ import Table from '@/components/Admin/Table/Table';
 import HeadingH2Part from '@/components/Utilities/Typography/HeadingH2Part';
 import Image from 'next/image';
 import * as React from 'react';
-import LoginDetails from '@/components/Admin/LoginDetails/LoginDetails';
+
 
 export interface IUserManagmentProps {
 }

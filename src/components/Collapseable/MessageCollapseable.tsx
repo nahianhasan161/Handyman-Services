@@ -38,7 +38,7 @@ export default function MessageCollapseable (props: IMessageCollapseableProps) {
         </div>
         <div>
         <div className='flex justify-between items-end'>
-        <p className='w-3/4'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        <p className='w-3/4'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
 standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
 it to make a type specimen book.</p>
         <small className='text-offwhite-500/50 font-medium'>5 hours ago</small>
@@ -46,7 +46,7 @@ it to make a type specimen book.</p>
         <div className=' mt-9 mb-12'>
             <p className='float-right w-3/4 bg-orange_600/30 pl-6 pr-5 pb-6 pt-5 rounded-tl-3xl rounded-br-3xl'>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
+the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley 
 of type and scrambled it to make a type specimen book.
             </p>
         </div>
